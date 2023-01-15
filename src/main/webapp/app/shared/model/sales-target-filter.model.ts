@@ -18,6 +18,7 @@ export interface ISalesTargetFilter {
   perRetailerDailyArticleMinQty?: number | null;
   perRetailerDailyArticleMaxQty?: number | null;
   state?: string | null;
+  rigion?: string | null;
   join?: FilterJoinType | null;
   isActive?: boolean | null;
   createdAt?: string | null;

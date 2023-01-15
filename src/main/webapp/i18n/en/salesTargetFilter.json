@@ -31,6 +31,7 @@
       "perRetailerDailyArticleMinQty": "Per Retailer Daily Article Min Qty",
       "perRetailerDailyArticleMaxQty": "Per Retailer Daily Article Max Qty",
       "state": "State",
+      "rigion": "Rigion",
       "join": "Join",
       "isActive": "Is Active",
       "createdAt": "Created At",

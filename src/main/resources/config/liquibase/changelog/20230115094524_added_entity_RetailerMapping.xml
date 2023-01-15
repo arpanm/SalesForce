@@ -29,6 +29,9 @@
             <column name="state" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
+            <column name="region" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
             <column name="registed_on" type="date">
                 <constraints nullable="true" />
             </column>
@@ -85,6 +88,7 @@
             <column name="agent_code" type="string"/>
             <column name="pincode" type="numeric"/>
             <column name="state" type="string"/>
+            <column name="region" type="string"/>
             <column name="registed_on" type="date"/>
             <column name="mapped_on" type="date"/>
             <column name="mapped_till" type="date"/>

@@ -48,6 +48,9 @@ class RetailerMappingResourceIT {
     private static final String DEFAULT_STATE = "AAAAAAAAAA";
     private static final String UPDATED_STATE = "BBBBBBBBBB";
 
+    private static final String DEFAULT_REGION = "AAAAAAAAAA";
+    private static final String UPDATED_REGION = "BBBBBBBBBB";
+
     private static final LocalDate DEFAULT_REGISTED_ON = LocalDate.ofEpochDay(0L);
     private static final LocalDate UPDATED_REGISTED_ON = LocalDate.now(ZoneId.systemDefault());
 
@@ -105,6 +108,7 @@ class RetailerMappingResourceIT {
             .agentCode(DEFAULT_AGENT_CODE)
             .pincode(DEFAULT_PINCODE)
             .state(DEFAULT_STATE)
+            .region(DEFAULT_REGION)
             .registedOn(DEFAULT_REGISTED_ON)
             .mappedOn(DEFAULT_MAPPED_ON)
             .mappedTill(DEFAULT_MAPPED_TILL)
@@ -129,6 +133,7 @@ class RetailerMappingResourceIT {
             .agentCode(UPDATED_AGENT_CODE)
             .pincode(UPDATED_PINCODE)
             .state(UPDATED_STATE)
+            .region(UPDATED_REGION)
             .registedOn(UPDATED_REGISTED_ON)
             .mappedOn(UPDATED_MAPPED_ON)
             .mappedTill(UPDATED_MAPPED_TILL)
@@ -166,6 +171,7 @@ class RetailerMappingResourceIT {
         assertThat(testRetailerMapping.getAgentCode()).isEqualTo(DEFAULT_AGENT_CODE);
         assertThat(testRetailerMapping.getPincode()).isEqualTo(DEFAULT_PINCODE);
         assertThat(testRetailerMapping.getState()).isEqualTo(DEFAULT_STATE);
+        assertThat(testRetailerMapping.getRegion()).isEqualTo(DEFAULT_REGION);
         assertThat(testRetailerMapping.getRegistedOn()).isEqualTo(DEFAULT_REGISTED_ON);
         assertThat(testRetailerMapping.getMappedOn()).isEqualTo(DEFAULT_MAPPED_ON);
         assertThat(testRetailerMapping.getMappedTill()).isEqualTo(DEFAULT_MAPPED_TILL);
@@ -214,6 +220,7 @@ class RetailerMappingResourceIT {
             .andExpect(jsonPath("$.[*].agentCode").value(hasItem(DEFAULT_AGENT_CODE)))
             .andExpect(jsonPath("$.[*].pincode").value(hasItem(DEFAULT_PINCODE.intValue())))
             .andExpect(jsonPath("$.[*].state").value(hasItem(DEFAULT_STATE)))
+            .andExpect(jsonPath("$.[*].region").value(hasItem(DEFAULT_REGION)))
             .andExpect(jsonPath("$.[*].registedOn").value(hasItem(DEFAULT_REGISTED_ON.toString())))
             .andExpect(jsonPath("$.[*].mappedOn").value(hasItem(DEFAULT_MAPPED_ON.toString())))
             .andExpect(jsonPath("$.[*].mappedTill").value(hasItem(DEFAULT_MAPPED_TILL.toString())))
@@ -241,6 +248,7 @@ class RetailerMappingResourceIT {
             .andExpect(jsonPath("$.agentCode").value(DEFAULT_AGENT_CODE))
             .andExpect(jsonPath("$.pincode").value(DEFAULT_PINCODE.intValue()))
             .andExpect(jsonPath("$.state").value(DEFAULT_STATE))
+            .andExpect(jsonPath("$.region").value(DEFAULT_REGION))
             .andExpect(jsonPath("$.registedOn").value(DEFAULT_REGISTED_ON.toString()))
             .andExpect(jsonPath("$.mappedOn").value(DEFAULT_MAPPED_ON.toString()))
             .andExpect(jsonPath("$.mappedTill").value(DEFAULT_MAPPED_TILL.toString()))
@@ -276,6 +284,7 @@ class RetailerMappingResourceIT {
             .agentCode(UPDATED_AGENT_CODE)
             .pincode(UPDATED_PINCODE)
             .state(UPDATED_STATE)
+            .region(UPDATED_REGION)
             .registedOn(UPDATED_REGISTED_ON)
             .mappedOn(UPDATED_MAPPED_ON)
             .mappedTill(UPDATED_MAPPED_TILL)
@@ -303,6 +312,7 @@ class RetailerMappingResourceIT {
         assertThat(testRetailerMapping.getAgentCode()).isEqualTo(UPDATED_AGENT_CODE);
         assertThat(testRetailerMapping.getPincode()).isEqualTo(UPDATED_PINCODE);
         assertThat(testRetailerMapping.getState()).isEqualTo(UPDATED_STATE);
+        assertThat(testRetailerMapping.getRegion()).isEqualTo(UPDATED_REGION);
         assertThat(testRetailerMapping.getRegistedOn()).isEqualTo(UPDATED_REGISTED_ON);
         assertThat(testRetailerMapping.getMappedOn()).isEqualTo(UPDATED_MAPPED_ON);
         assertThat(testRetailerMapping.getMappedTill()).isEqualTo(UPDATED_MAPPED_TILL);
@@ -394,9 +404,9 @@ class RetailerMappingResourceIT {
 
         partialUpdatedRetailerMapping
             .state(UPDATED_STATE)
+            .region(UPDATED_REGION)
             .registedOn(UPDATED_REGISTED_ON)
-            .mappedOn(UPDATED_MAPPED_ON)
-            .mappedTill(UPDATED_MAPPED_TILL);
+            .mappedOn(UPDATED_MAPPED_ON);
 
         restRetailerMappingMockMvc
             .perform(
@@ -415,9 +425,10 @@ class RetailerMappingResourceIT {
         assertThat(testRetailerMapping.getAgentCode()).isEqualTo(DEFAULT_AGENT_CODE);
         assertThat(testRetailerMapping.getPincode()).isEqualTo(DEFAULT_PINCODE);
         assertThat(testRetailerMapping.getState()).isEqualTo(UPDATED_STATE);
+        assertThat(testRetailerMapping.getRegion()).isEqualTo(UPDATED_REGION);
         assertThat(testRetailerMapping.getRegistedOn()).isEqualTo(UPDATED_REGISTED_ON);
         assertThat(testRetailerMapping.getMappedOn()).isEqualTo(UPDATED_MAPPED_ON);
-        assertThat(testRetailerMapping.getMappedTill()).isEqualTo(UPDATED_MAPPED_TILL);
+        assertThat(testRetailerMapping.getMappedTill()).isEqualTo(DEFAULT_MAPPED_TILL);
         assertThat(testRetailerMapping.getIsActive()).isEqualTo(DEFAULT_IS_ACTIVE);
         assertThat(testRetailerMapping.getCreatedAt()).isEqualTo(DEFAULT_CREATED_AT);
         assertThat(testRetailerMapping.getUpdatedAt()).isEqualTo(DEFAULT_UPDATED_AT);
@@ -443,6 +454,7 @@ class RetailerMappingResourceIT {
             .agentCode(UPDATED_AGENT_CODE)
             .pincode(UPDATED_PINCODE)
             .state(UPDATED_STATE)
+            .region(UPDATED_REGION)
             .registedOn(UPDATED_REGISTED_ON)
             .mappedOn(UPDATED_MAPPED_ON)
             .mappedTill(UPDATED_MAPPED_TILL)
@@ -469,6 +481,7 @@ class RetailerMappingResourceIT {
         assertThat(testRetailerMapping.getAgentCode()).isEqualTo(UPDATED_AGENT_CODE);
         assertThat(testRetailerMapping.getPincode()).isEqualTo(UPDATED_PINCODE);
         assertThat(testRetailerMapping.getState()).isEqualTo(UPDATED_STATE);
+        assertThat(testRetailerMapping.getRegion()).isEqualTo(UPDATED_REGION);
         assertThat(testRetailerMapping.getRegistedOn()).isEqualTo(UPDATED_REGISTED_ON);
         assertThat(testRetailerMapping.getMappedOn()).isEqualTo(UPDATED_MAPPED_ON);
         assertThat(testRetailerMapping.getMappedTill()).isEqualTo(UPDATED_MAPPED_TILL);

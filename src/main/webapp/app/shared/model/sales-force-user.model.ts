@@ -14,6 +14,8 @@ export interface ISalesForceUser {
   userRole?: Role | null;
   dateOfJoining?: string | null;
   dateOfExit?: string | null;
+  state?: string | null;
+  region?: string | null;
   isActive?: boolean | null;
   createdAt?: string | null;
   updatedAt?: string | null;

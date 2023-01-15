@@ -130,6 +130,13 @@ export const RetailerMappingUpdate = () => {
                 type="text"
               />
               <ValidatedField
+                label={translate('salesForceApp.retailerMapping.region')}
+                id="retailer-mapping-region"
+                name="region"
+                data-cy="region"
+                type="text"
+              />
+              <ValidatedField
                 label={translate('salesForceApp.retailerMapping.registedOn')}
                 id="retailer-mapping-registedOn"
                 name="registedOn"

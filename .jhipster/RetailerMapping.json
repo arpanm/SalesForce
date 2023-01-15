@@ -26,6 +26,10 @@
       "fieldType": "String"
     },
     {
+      "fieldName": "region",
+      "fieldType": "String"
+    },
+    {
       "fieldName": "registedOn",
       "fieldType": "LocalDate"
     },

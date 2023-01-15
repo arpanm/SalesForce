@@ -23,6 +23,7 @@
       "agentCode": "Agent Code",
       "pincode": "Pincode",
       "state": "State",
+      "region": "Region",
       "registedOn": "Registed On",
       "mappedOn": "Mapped On",
       "mappedTill": "Mapped Till",

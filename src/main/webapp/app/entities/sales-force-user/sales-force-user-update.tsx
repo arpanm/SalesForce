@@ -159,6 +159,20 @@ export const SalesForceUserUpdate = () => {
                 type="date"
               />
               <ValidatedField
+                label={translate('salesForceApp.salesForceUser.state')}
+                id="sales-force-user-state"
+                name="state"
+                data-cy="state"
+                type="text"
+              />
+              <ValidatedField
+                label={translate('salesForceApp.salesForceUser.region')}
+                id="sales-force-user-region"
+                name="region"
+                data-cy="region"
+                type="text"
+              />
+              <ValidatedField
                 label={translate('salesForceApp.salesForceUser.isActive')}
                 id="sales-force-user-isActive"
                 name="isActive"

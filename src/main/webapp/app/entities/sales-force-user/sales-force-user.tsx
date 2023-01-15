@@ -144,6 +144,12 @@ export const SalesForceUser = () => {
                   <th className="hand" onClick={sort('dateOfExit')}>
                     <Translate contentKey="salesForceApp.salesForceUser.dateOfExit">Date Of Exit</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
+                  <th className="hand" onClick={sort('state')}>
+                    <Translate contentKey="salesForceApp.salesForceUser.state">State</Translate> <FontAwesomeIcon icon="sort" />
+                  </th>
+                  <th className="hand" onClick={sort('region')}>
+                    <Translate contentKey="salesForceApp.salesForceUser.region">Region</Translate> <FontAwesomeIcon icon="sort" />
+                  </th>
                   <th className="hand" onClick={sort('isActive')}>
                     <Translate contentKey="salesForceApp.salesForceUser.isActive">Is Active</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
@@ -189,6 +195,8 @@ export const SalesForceUser = () => {
                         <TextFormat type="date" value={salesForceUser.dateOfExit} format={APP_LOCAL_DATE_FORMAT} />
                       ) : null}
                     </td>
+                    <td>{salesForceUser.state}</td>
+                    <td>{salesForceUser.region}</td>
                     <td>{salesForceUser.isActive ? 'true' : 'false'}</td>
                     <td>
                       {salesForceUser.createdAt ? (

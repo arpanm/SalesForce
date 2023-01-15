@@ -63,6 +63,12 @@ export const RetailerMappingDetail = () => {
           </dt>
           <dd>{retailerMappingEntity.state}</dd>
           <dt>
+            <span id="region">
+              <Translate contentKey="salesForceApp.retailerMapping.region">Region</Translate>
+            </span>
+          </dt>
+          <dd>{retailerMappingEntity.region}</dd>
+          <dt>
             <span id="registedOn">
               <Translate contentKey="salesForceApp.retailerMapping.registedOn">Registed On</Translate>
             </span>

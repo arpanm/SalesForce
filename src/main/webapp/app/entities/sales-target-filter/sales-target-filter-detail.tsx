@@ -115,6 +115,12 @@ export const SalesTargetFilterDetail = () => {
           </dt>
           <dd>{salesTargetFilterEntity.state}</dd>
           <dt>
+            <span id="rigion">
+              <Translate contentKey="salesForceApp.salesTargetFilter.rigion">Rigion</Translate>
+            </span>
+          </dt>
+          <dd>{salesTargetFilterEntity.rigion}</dd>
+          <dt>
             <span id="join">
               <Translate contentKey="salesForceApp.salesTargetFilter.join">Join</Translate>
             </span>

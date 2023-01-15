@@ -74,6 +74,9 @@ class SalesTargetFilterResourceIT {
     private static final String DEFAULT_STATE = "AAAAAAAAAA";
     private static final String UPDATED_STATE = "BBBBBBBBBB";
 
+    private static final String DEFAULT_RIGION = "AAAAAAAAAA";
+    private static final String UPDATED_RIGION = "BBBBBBBBBB";
+
     private static final FilterJoinType DEFAULT_JOIN = FilterJoinType.AND;
     private static final FilterJoinType UPDATED_JOIN = FilterJoinType.OR;
 
@@ -133,6 +136,7 @@ class SalesTargetFilterResourceIT {
             .perRetailerDailyArticleMinQty(DEFAULT_PER_RETAILER_DAILY_ARTICLE_MIN_QTY)
             .perRetailerDailyArticleMaxQty(DEFAULT_PER_RETAILER_DAILY_ARTICLE_MAX_QTY)
             .state(DEFAULT_STATE)
+            .rigion(DEFAULT_RIGION)
             .join(DEFAULT_JOIN)
             .isActive(DEFAULT_IS_ACTIVE)
             .createdAt(DEFAULT_CREATED_AT)
@@ -163,6 +167,7 @@ class SalesTargetFilterResourceIT {
             .perRetailerDailyArticleMinQty(UPDATED_PER_RETAILER_DAILY_ARTICLE_MIN_QTY)
             .perRetailerDailyArticleMaxQty(UPDATED_PER_RETAILER_DAILY_ARTICLE_MAX_QTY)
             .state(UPDATED_STATE)
+            .rigion(UPDATED_RIGION)
             .join(UPDATED_JOIN)
             .isActive(UPDATED_IS_ACTIVE)
             .createdAt(UPDATED_CREATED_AT)
@@ -208,6 +213,7 @@ class SalesTargetFilterResourceIT {
         assertThat(testSalesTargetFilter.getPerRetailerDailyArticleMinQty()).isEqualTo(DEFAULT_PER_RETAILER_DAILY_ARTICLE_MIN_QTY);
         assertThat(testSalesTargetFilter.getPerRetailerDailyArticleMaxQty()).isEqualTo(DEFAULT_PER_RETAILER_DAILY_ARTICLE_MAX_QTY);
         assertThat(testSalesTargetFilter.getState()).isEqualTo(DEFAULT_STATE);
+        assertThat(testSalesTargetFilter.getRigion()).isEqualTo(DEFAULT_RIGION);
         assertThat(testSalesTargetFilter.getJoin()).isEqualTo(DEFAULT_JOIN);
         assertThat(testSalesTargetFilter.getIsActive()).isEqualTo(DEFAULT_IS_ACTIVE);
         assertThat(testSalesTargetFilter.getCreatedAt()).isEqualTo(DEFAULT_CREATED_AT);
@@ -268,6 +274,7 @@ class SalesTargetFilterResourceIT {
                 jsonPath("$.[*].perRetailerDailyArticleMaxQty").value(hasItem(DEFAULT_PER_RETAILER_DAILY_ARTICLE_MAX_QTY.intValue()))
             )
             .andExpect(jsonPath("$.[*].state").value(hasItem(DEFAULT_STATE)))
+            .andExpect(jsonPath("$.[*].rigion").value(hasItem(DEFAULT_RIGION)))
             .andExpect(jsonPath("$.[*].join").value(hasItem(DEFAULT_JOIN.toString())))
             .andExpect(jsonPath("$.[*].isActive").value(hasItem(DEFAULT_IS_ACTIVE.booleanValue())))
             .andExpect(jsonPath("$.[*].createdAt").value(hasItem(DEFAULT_CREATED_AT.toString())))
@@ -301,6 +308,7 @@ class SalesTargetFilterResourceIT {
             .andExpect(jsonPath("$.perRetailerDailyArticleMinQty").value(DEFAULT_PER_RETAILER_DAILY_ARTICLE_MIN_QTY.intValue()))
             .andExpect(jsonPath("$.perRetailerDailyArticleMaxQty").value(DEFAULT_PER_RETAILER_DAILY_ARTICLE_MAX_QTY.intValue()))
             .andExpect(jsonPath("$.state").value(DEFAULT_STATE))
+            .andExpect(jsonPath("$.rigion").value(DEFAULT_RIGION))
             .andExpect(jsonPath("$.join").value(DEFAULT_JOIN.toString()))
             .andExpect(jsonPath("$.isActive").value(DEFAULT_IS_ACTIVE.booleanValue()))
             .andExpect(jsonPath("$.createdAt").value(DEFAULT_CREATED_AT.toString()))
@@ -342,6 +350,7 @@ class SalesTargetFilterResourceIT {
             .perRetailerDailyArticleMinQty(UPDATED_PER_RETAILER_DAILY_ARTICLE_MIN_QTY)
             .perRetailerDailyArticleMaxQty(UPDATED_PER_RETAILER_DAILY_ARTICLE_MAX_QTY)
             .state(UPDATED_STATE)
+            .rigion(UPDATED_RIGION)
             .join(UPDATED_JOIN)
             .isActive(UPDATED_IS_ACTIVE)
             .createdAt(UPDATED_CREATED_AT)
@@ -375,6 +384,7 @@ class SalesTargetFilterResourceIT {
         assertThat(testSalesTargetFilter.getPerRetailerDailyArticleMinQty()).isEqualTo(UPDATED_PER_RETAILER_DAILY_ARTICLE_MIN_QTY);
         assertThat(testSalesTargetFilter.getPerRetailerDailyArticleMaxQty()).isEqualTo(UPDATED_PER_RETAILER_DAILY_ARTICLE_MAX_QTY);
         assertThat(testSalesTargetFilter.getState()).isEqualTo(UPDATED_STATE);
+        assertThat(testSalesTargetFilter.getRigion()).isEqualTo(UPDATED_RIGION);
         assertThat(testSalesTargetFilter.getJoin()).isEqualTo(UPDATED_JOIN);
         assertThat(testSalesTargetFilter.getIsActive()).isEqualTo(UPDATED_IS_ACTIVE);
         assertThat(testSalesTargetFilter.getCreatedAt()).isEqualTo(UPDATED_CREATED_AT);
@@ -468,9 +478,9 @@ class SalesTargetFilterResourceIT {
             .perRetailerArticleMaxQty(UPDATED_PER_RETAILER_ARTICLE_MAX_QTY)
             .perRetailerDailyArticleMinQty(UPDATED_PER_RETAILER_DAILY_ARTICLE_MIN_QTY)
             .perRetailerDailyArticleMaxQty(UPDATED_PER_RETAILER_DAILY_ARTICLE_MAX_QTY)
-            .isActive(UPDATED_IS_ACTIVE)
-            .updatedAt(UPDATED_UPDATED_AT)
-            .createdBy(UPDATED_CREATED_BY);
+            .join(UPDATED_JOIN)
+            .createdAt(UPDATED_CREATED_AT)
+            .updatedAt(UPDATED_UPDATED_AT);
 
         restSalesTargetFilterMockMvc
             .perform(
@@ -497,11 +507,12 @@ class SalesTargetFilterResourceIT {
         assertThat(testSalesTargetFilter.getPerRetailerDailyArticleMinQty()).isEqualTo(UPDATED_PER_RETAILER_DAILY_ARTICLE_MIN_QTY);
         assertThat(testSalesTargetFilter.getPerRetailerDailyArticleMaxQty()).isEqualTo(UPDATED_PER_RETAILER_DAILY_ARTICLE_MAX_QTY);
         assertThat(testSalesTargetFilter.getState()).isEqualTo(DEFAULT_STATE);
-        assertThat(testSalesTargetFilter.getJoin()).isEqualTo(DEFAULT_JOIN);
-        assertThat(testSalesTargetFilter.getIsActive()).isEqualTo(UPDATED_IS_ACTIVE);
-        assertThat(testSalesTargetFilter.getCreatedAt()).isEqualTo(DEFAULT_CREATED_AT);
+        assertThat(testSalesTargetFilter.getRigion()).isEqualTo(DEFAULT_RIGION);
+        assertThat(testSalesTargetFilter.getJoin()).isEqualTo(UPDATED_JOIN);
+        assertThat(testSalesTargetFilter.getIsActive()).isEqualTo(DEFAULT_IS_ACTIVE);
+        assertThat(testSalesTargetFilter.getCreatedAt()).isEqualTo(UPDATED_CREATED_AT);
         assertThat(testSalesTargetFilter.getUpdatedAt()).isEqualTo(UPDATED_UPDATED_AT);
-        assertThat(testSalesTargetFilter.getCreatedBy()).isEqualTo(UPDATED_CREATED_BY);
+        assertThat(testSalesTargetFilter.getCreatedBy()).isEqualTo(DEFAULT_CREATED_BY);
         assertThat(testSalesTargetFilter.getUpdatedBy()).isEqualTo(DEFAULT_UPDATED_BY);
     }
 
@@ -531,6 +542,7 @@ class SalesTargetFilterResourceIT {
             .perRetailerDailyArticleMinQty(UPDATED_PER_RETAILER_DAILY_ARTICLE_MIN_QTY)
             .perRetailerDailyArticleMaxQty(UPDATED_PER_RETAILER_DAILY_ARTICLE_MAX_QTY)
             .state(UPDATED_STATE)
+            .rigion(UPDATED_RIGION)
             .join(UPDATED_JOIN)
             .isActive(UPDATED_IS_ACTIVE)
             .createdAt(UPDATED_CREATED_AT)
@@ -563,6 +575,7 @@ class SalesTargetFilterResourceIT {
         assertThat(testSalesTargetFilter.getPerRetailerDailyArticleMinQty()).isEqualTo(UPDATED_PER_RETAILER_DAILY_ARTICLE_MIN_QTY);
         assertThat(testSalesTargetFilter.getPerRetailerDailyArticleMaxQty()).isEqualTo(UPDATED_PER_RETAILER_DAILY_ARTICLE_MAX_QTY);
         assertThat(testSalesTargetFilter.getState()).isEqualTo(UPDATED_STATE);
+        assertThat(testSalesTargetFilter.getRigion()).isEqualTo(UPDATED_RIGION);
         assertThat(testSalesTargetFilter.getJoin()).isEqualTo(UPDATED_JOIN);
         assertThat(testSalesTargetFilter.getIsActive()).isEqualTo(UPDATED_IS_ACTIVE);
         assertThat(testSalesTargetFilter.getCreatedAt()).isEqualTo(UPDATED_CREATED_AT);
