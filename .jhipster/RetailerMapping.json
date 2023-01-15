@@ -1,0 +1,81 @@
+{
+  "applications": ["SalesForce"],
+  "changelogDate": "20230115094524",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "retailer_mapping",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "prmId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "agentCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pincode",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "state",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "registedOn",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "mappedOn",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "mappedTill",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "RetailerMapping",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "salesForceUser",
+      "otherEntityRelationshipName": "retailerMappings",
+      "relationshipName": "relationshipManager",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "salesForceUser",
+      "otherEntityRelationshipName": "approvedRetailerMappings",
+      "relationshipName": "approvedBy",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

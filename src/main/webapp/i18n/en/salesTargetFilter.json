@@ -1,0 +1,43 @@
+{
+  "salesForceApp": {
+    "salesTargetFilter": {
+      "home": {
+        "title": "Sales Target Filters",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Sales Target Filter",
+        "createOrEditLabel": "Create or edit a Sales Target Filter",
+        "notFound": "No Sales Target Filters found"
+      },
+      "created": "A new Sales Target Filter is created with identifier {{ param }}",
+      "updated": "A Sales Target Filter is updated with identifier {{ param }}",
+      "deleted": "A Sales Target Filter is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Sales Target Filter {{ id }}?"
+      },
+      "detail": {
+        "title": "Sales Target Filter"
+      },
+      "id": "ID",
+      "articleId": "Article Id",
+      "category": "Category",
+      "brand": "Brand",
+      "model": "Model",
+      "articleMinPrice": "Article Min Price",
+      "articleMaxPrice": "Article Max Price",
+      "perOrderArticleMinQty": "Per Order Article Min Qty",
+      "perOrderArticleMaxQty": "Per Order Article Max Qty",
+      "perRetailerArticleMinQty": "Per Retailer Article Min Qty",
+      "perRetailerArticleMaxQty": "Per Retailer Article Max Qty",
+      "perRetailerDailyArticleMinQty": "Per Retailer Daily Article Min Qty",
+      "perRetailerDailyArticleMaxQty": "Per Retailer Daily Article Max Qty",
+      "state": "State",
+      "join": "Join",
+      "isActive": "Is Active",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By",
+      "target": "Target"
+    }
+  }
+}

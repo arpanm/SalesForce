@@ -1,0 +1,75 @@
+{
+  "applications": ["SalesForce"],
+  "changelogDate": "20230115094521",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "sales_target",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "SalesTargetType",
+      "fieldValues": "Revenue,OrderCount,WoD"
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "Float",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "SalesTarget",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "salesTargetFilter",
+      "otherEntityRelationshipName": "target",
+      "relationshipName": "filters",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "incentiveScheme",
+      "otherEntityRelationshipName": "target",
+      "relationshipName": "incentiveSchemes",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "salesForceUser",
+      "otherEntityRelationshipName": "approvedSalesTargets",
+      "relationshipName": "approvedBy",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

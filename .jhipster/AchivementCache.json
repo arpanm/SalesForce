@@ -1,0 +1,84 @@
+{
+  "applications": ["SalesForce"],
+  "changelogDate": "20230115094526",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "achivement_cache",
+  "fields": [
+    {
+      "fieldName": "startDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "articleId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "category",
+      "fieldType": "Category",
+      "fieldValues": "CD,IT,SDA,Audio,Storage,Mobile,Other,All"
+    },
+    {
+      "fieldName": "brand",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "model",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "retailerId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "retailerState",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "orderQty",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "totalOrderValue",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "AchivementCache",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "salesForceUser",
+      "otherEntityRelationshipName": "achivementCaches",
+      "relationshipName": "salesAgent",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

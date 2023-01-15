@@ -1,0 +1,39 @@
+{
+  "salesForceApp": {
+    "orderCache": {
+      "home": {
+        "title": "Order Caches",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Order Cache",
+        "createOrEditLabel": "Create or edit a Order Cache",
+        "notFound": "No Order Caches found"
+      },
+      "created": "A new Order Cache is created with identifier {{ param }}",
+      "updated": "A Order Cache is updated with identifier {{ param }}",
+      "deleted": "A Order Cache is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Order Cache {{ id }}?"
+      },
+      "detail": {
+        "title": "Order Cache"
+      },
+      "id": "ID",
+      "orderId": "Order Id",
+      "orderStatus": "Order Status",
+      "orderDate": "Order Date",
+      "articleId": "Article Id",
+      "category": "Category",
+      "brand": "Brand",
+      "model": "Model",
+      "articlePrice": "Article Price",
+      "articleQty": "Article Qty",
+      "retailerId": "Retailer Id",
+      "retailerState": "Retailer State",
+      "isActive": "Is Active",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By"
+    }
+  }
+}

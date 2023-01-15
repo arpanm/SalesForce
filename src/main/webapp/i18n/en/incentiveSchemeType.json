@@ -1,0 +1,9 @@
+{
+  "salesForceApp": {
+    "IncentiveSchemeType": {
+      "null": "",
+      "Percent": "Percent",
+      "Absolute": "Absolute"
+    }
+  }
+}
