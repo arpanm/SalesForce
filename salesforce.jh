@@ -1,0 +1,232 @@
+application {
+  config {
+    baseName SalesForce,
+    serverPort 8080,
+    applicationType monolith,
+    packageName com.ril.digital.salesforce,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+    enableSwaggerCodegen true,
+    clientFramework react,
+    clientPackageManager npm,
+    buildTool maven,
+    languages [en]
+  }
+  entities *
+  dto * with mapstruct
+  paginate * with infinite-scroll
+  service all with serviceImpl
+}
+
+entity SalesForceUser {
+    name String required,
+    email String pattern(/^[^@\s]+@ril\.[^@\s]+$/) required,
+    phone Long min(1000000000) max(9999999999) required,
+    role Role,
+    dateOfJoining LocalDate,
+    dateOfExit LocalDate,
+    isActive Boolean,
+    createdAt LocalDate,
+    updatedAt LocalDate,
+    createdBy String,
+    updatedBy String
+}
+
+enum Role {
+    SuperAdmin,
+    HRAdmin,
+    SalesAdmin,
+    RegionalHead,
+    StateHead,
+    AOL,
+    JMDL,
+    JMDO,
+    Other
+}
+
+relationship OneToMany {
+    SalesForceUser to SalesForceUser{manager}
+}
+
+entity SalesTarget {
+    type SalesTargetType,
+    startDate LocalDate required,
+    endDate LocalDate required,
+    value Float required,
+    isActive Boolean,
+    createdAt LocalDate,
+    updatedAt LocalDate,
+    createdBy String,
+    updatedBy String
+}
+
+enum SalesTargetType {
+	Revenue,
+    OrderCount,
+    WoD
+}
+
+enum Category {
+	CD,
+    IT,
+    SDA,
+    Audio,
+    Storage,
+    Mobile,
+    Other,
+    All
+}
+
+relationship OneToMany {
+    SalesForceUser to SalesTarget{approvedBy}
+}
+
+entity SalesTargetFilter {
+	articleId String,
+    category Category,
+    brand String,
+    model String,
+    articleMinPrice Float,
+    articleMaxPrice Float,
+    perOrderArticleMinQty Long,
+    perOrderArticleMaxQty Long,
+    perRetailerArticleMinQty Long,
+    perRetailerArticleMaxQty Long,
+    perRetailerDailyArticleMinQty Long,
+    perRetailerDailyArticleMaxQty Long,
+    state String,
+    join FilterJoinType,
+    isActive Boolean,
+    createdAt LocalDate,
+    updatedAt LocalDate,
+    createdBy String,
+    updatedBy String
+}
+
+enum FilterJoinType {
+	AND,
+    OR
+}
+
+relationship OneToMany {
+    SalesTarget to SalesTargetFilter{target}
+}
+
+entity IncentiveScheme {
+    type IncentiveSchemeType,
+    minAchivementPercent Float,
+    maxAchivementPercent Float,
+    value Float,
+    isActive Boolean,
+    createdAt LocalDate,
+    updatedAt LocalDate,
+    createdBy String,
+    updatedBy String
+}
+
+enum IncentiveSchemeType {
+    Percent,
+    Absolute
+}
+
+relationship OneToMany {
+    SalesTarget to IncentiveScheme{target}
+}
+
+relationship OneToMany {
+    SalesForceUser to IncentiveScheme{approvedBy}
+}
+
+entity RetailerMapping {
+	name String,
+    prmId String,
+    agentCode String,
+    pincode Long,
+    state String,
+    registedOn LocalDate,
+    mappedOn LocalDate,
+    mappedTill LocalDate,
+    isActive Boolean,
+    createdAt LocalDate,
+    updatedAt LocalDate,
+    createdBy String,
+    updatedBy String
+}
+
+relationship OneToMany {
+    SalesForceUser to RetailerMapping{relationshipManager}
+}
+
+relationship OneToMany {
+    SalesForceUser to RetailerMapping{approvedBy}
+}
+
+entity OrderCache {
+    orderId String,
+    orderStatus OrderStatus,
+    orderDate LocalDate,
+    articleId String,
+    category Category,
+    brand String,
+    model String,
+    articlePrice Float,
+    articleQty Long,
+    retailerId String,
+    retailerState String,
+    isActive Boolean,
+    createdAt LocalDate,
+    updatedAt LocalDate,
+    createdBy String,
+    updatedBy String
+}
+
+enum OrderStatus {
+	Open,
+    Cancelled,
+    Invoiced,
+    InTransit,
+    Delivered,
+    FR,
+    Returned
+}
+
+entity AchivementCache {
+    startDate LocalDate,
+    endDate LocalDate,
+    articleId String,
+    category Category,
+    brand String,
+    model String,
+    retailerId String,
+    retailerState String,
+    orderQty Long,
+    totalOrderValue Float,
+    isActive Boolean,
+    createdAt LocalDate,
+    updatedAt LocalDate,
+    createdBy String,
+    updatedBy String
+}
+
+relationship OneToMany {
+    SalesForceUser to AchivementCache{salesAgent}
+}
+
+entity Incentive {
+    achivementPercent Float,
+    value Float,
+    isActive Boolean,
+    createdAt LocalDate,
+    updatedAt LocalDate,
+    createdBy String,
+    updatedBy String
+}
+
+relationship OneToMany {
+    IncentiveScheme to Incentive{scheme},
+    SalesForceUser to Incentive{salesAgent}
+}
+
+relationship OneToMany {
+    SalesForceUser to Incentive{approvedBy}
+}
