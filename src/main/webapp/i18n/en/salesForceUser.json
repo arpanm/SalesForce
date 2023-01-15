@@ -1,0 +1,43 @@
+{
+  "salesForceApp": {
+    "salesForceUser": {
+      "home": {
+        "title": "Sales Force Users",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Sales Force User",
+        "createOrEditLabel": "Create or edit a Sales Force User",
+        "notFound": "No Sales Force Users found"
+      },
+      "created": "A new Sales Force User is created with identifier {{ param }}",
+      "updated": "A Sales Force User is updated with identifier {{ param }}",
+      "deleted": "A Sales Force User is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Sales Force User {{ id }}?"
+      },
+      "detail": {
+        "title": "Sales Force User"
+      },
+      "id": "ID",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "role": "Role",
+      "dateOfJoining": "Date Of Joining",
+      "dateOfExit": "Date Of Exit",
+      "isActive": "Is Active",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By",
+      "subordinates": "Subordinates",
+      "approvedSalesTargets": "Approved Sales Targets",
+      "approvedIncentiveSchemes": "Approved Incentive Schemes",
+      "retailerMappings": "Retailer Mappings",
+      "approvedRetailerMappings": "Approved Retailer Mappings",
+      "achivementCaches": "Achivement Caches",
+      "incentives": "Incentives",
+      "approvedIncentives": "Approved Incentives",
+      "manager": "Manager"
+    }
+  }
+}

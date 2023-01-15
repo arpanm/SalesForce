@@ -1,0 +1,38 @@
+{
+  "salesForceApp": {
+    "retailerMapping": {
+      "home": {
+        "title": "Retailer Mappings",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Retailer Mapping",
+        "createOrEditLabel": "Create or edit a Retailer Mapping",
+        "notFound": "No Retailer Mappings found"
+      },
+      "created": "A new Retailer Mapping is created with identifier {{ param }}",
+      "updated": "A Retailer Mapping is updated with identifier {{ param }}",
+      "deleted": "A Retailer Mapping is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Retailer Mapping {{ id }}?"
+      },
+      "detail": {
+        "title": "Retailer Mapping"
+      },
+      "id": "ID",
+      "name": "Name",
+      "prmId": "Prm Id",
+      "agentCode": "Agent Code",
+      "pincode": "Pincode",
+      "state": "State",
+      "registedOn": "Registed On",
+      "mappedOn": "Mapped On",
+      "mappedTill": "Mapped Till",
+      "isActive": "Is Active",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By",
+      "relationshipManager": "Relationship Manager",
+      "approvedBy": "Approved By"
+    }
+  }
+}

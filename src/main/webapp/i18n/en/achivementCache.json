@@ -1,0 +1,39 @@
+{
+  "salesForceApp": {
+    "achivementCache": {
+      "home": {
+        "title": "Achivement Caches",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Achivement Cache",
+        "createOrEditLabel": "Create or edit a Achivement Cache",
+        "notFound": "No Achivement Caches found"
+      },
+      "created": "A new Achivement Cache is created with identifier {{ param }}",
+      "updated": "A Achivement Cache is updated with identifier {{ param }}",
+      "deleted": "A Achivement Cache is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Achivement Cache {{ id }}?"
+      },
+      "detail": {
+        "title": "Achivement Cache"
+      },
+      "id": "ID",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "articleId": "Article Id",
+      "category": "Category",
+      "brand": "Brand",
+      "model": "Model",
+      "retailerId": "Retailer Id",
+      "retailerState": "Retailer State",
+      "orderQty": "Order Qty",
+      "totalOrderValue": "Total Order Value",
+      "isActive": "Is Active",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By",
+      "salesAgent": "Sales Agent"
+    }
+  }
+}

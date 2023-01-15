@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity RetailerMapping.
+    -->
+    <changeSet id="20230115094524-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="relationship_manager_id"
+                                 baseTableName="retailer_mapping"
+                                 constraintName="fk_retailer_mapping__relationship_manager_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sales_force_user"/>
+
+        <addForeignKeyConstraint baseColumnNames="approved_by_id"
+                                 baseTableName="retailer_mapping"
+                                 constraintName="fk_retailer_mapping__approved_by_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sales_force_user"/>
+    </changeSet>
+</databaseChangeLog>

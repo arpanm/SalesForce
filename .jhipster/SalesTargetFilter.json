@@ -1,0 +1,101 @@
+{
+  "applications": ["SalesForce"],
+  "changelogDate": "20230115094522",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "sales_target_filter",
+  "fields": [
+    {
+      "fieldName": "articleId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "category",
+      "fieldType": "Category",
+      "fieldValues": "CD,IT,SDA,Audio,Storage,Mobile,Other,All"
+    },
+    {
+      "fieldName": "brand",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "model",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "articleMinPrice",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "articleMaxPrice",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "perOrderArticleMinQty",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "perOrderArticleMaxQty",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "perRetailerArticleMinQty",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "perRetailerArticleMaxQty",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "perRetailerDailyArticleMinQty",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "perRetailerDailyArticleMaxQty",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "state",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "join",
+      "fieldType": "FilterJoinType",
+      "fieldValues": "AND,OR"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "SalesTargetFilter",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "salesTarget",
+      "otherEntityRelationshipName": "filters",
+      "relationshipName": "target",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

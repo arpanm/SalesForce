@@ -1,0 +1,122 @@
+{
+  "applications": ["SalesForce"],
+  "changelogDate": "20230115094520",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "sales_force_user",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["pattern", "required"],
+      "fieldValidateRulesPattern": "^[^@\\s]+@ril\\.[^@\\s]+$"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "Long",
+      "fieldValidateRules": ["min", "max", "required"],
+      "fieldValidateRulesMax": "9999999999",
+      "fieldValidateRulesMin": "1000000000"
+    },
+    {
+      "fieldName": "role",
+      "fieldType": "Role",
+      "fieldValues": "SuperAdmin,HRAdmin,SalesAdmin,RegionalHead,StateHead,AOL,JMDL,JMDO,Other"
+    },
+    {
+      "fieldName": "dateOfJoining",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "dateOfExit",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "SalesForceUser",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "salesForceUser",
+      "otherEntityRelationshipName": "manager",
+      "relationshipName": "subordinates",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "salesTarget",
+      "otherEntityRelationshipName": "approvedBy",
+      "relationshipName": "approvedSalesTargets",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "incentiveScheme",
+      "otherEntityRelationshipName": "approvedBy",
+      "relationshipName": "approvedIncentiveSchemes",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "retailerMapping",
+      "otherEntityRelationshipName": "relationshipManager",
+      "relationshipName": "retailerMappings",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "retailerMapping",
+      "otherEntityRelationshipName": "approvedBy",
+      "relationshipName": "approvedRetailerMappings",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "achivementCache",
+      "otherEntityRelationshipName": "salesAgent",
+      "relationshipName": "achivementCaches",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "incentive",
+      "otherEntityRelationshipName": "salesAgent",
+      "relationshipName": "incentives",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "incentive",
+      "otherEntityRelationshipName": "approvedBy",
+      "relationshipName": "approvedIncentives",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "salesForceUser",
+      "otherEntityRelationshipName": "subordinates",
+      "relationshipName": "manager",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,35 @@
+{
+  "salesForceApp": {
+    "salesTarget": {
+      "home": {
+        "title": "Sales Targets",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Sales Target",
+        "createOrEditLabel": "Create or edit a Sales Target",
+        "notFound": "No Sales Targets found"
+      },
+      "created": "A new Sales Target is created with identifier {{ param }}",
+      "updated": "A Sales Target is updated with identifier {{ param }}",
+      "deleted": "A Sales Target is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Sales Target {{ id }}?"
+      },
+      "detail": {
+        "title": "Sales Target"
+      },
+      "id": "ID",
+      "type": "Type",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "value": "Value",
+      "isActive": "Is Active",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By",
+      "filters": "Filters",
+      "incentiveSchemes": "Incentive Schemes",
+      "approvedBy": "Approved By"
+    }
+  }
+}

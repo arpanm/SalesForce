@@ -1,0 +1,10 @@
+{
+  "salesForceApp": {
+    "SalesTargetType": {
+      "null": "",
+      "Revenue": "Revenue",
+      "OrderCount": "OrderCount",
+      "WoD": "WoD"
+    }
+  }
+}

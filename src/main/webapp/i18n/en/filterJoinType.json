@@ -1,0 +1,9 @@
+{
+  "salesForceApp": {
+    "FilterJoinType": {
+      "null": "",
+      "AND": "AND",
+      "OR": "OR"
+    }
+  }
+}

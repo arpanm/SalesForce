@@ -1,0 +1,82 @@
+{
+  "applications": ["SalesForce"],
+  "changelogDate": "20230115094525",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "order_cache",
+  "fields": [
+    {
+      "fieldName": "orderId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "orderStatus",
+      "fieldType": "OrderStatus",
+      "fieldValues": "Open,Cancelled,Invoiced,InTransit,Delivered,FR,Returned"
+    },
+    {
+      "fieldName": "orderDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "articleId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "category",
+      "fieldType": "Category",
+      "fieldValues": "CD,IT,SDA,Audio,Storage,Mobile,Other,All"
+    },
+    {
+      "fieldName": "brand",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "model",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "articlePrice",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "articleQty",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "retailerId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "retailerState",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "OrderCache",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

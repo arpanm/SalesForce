@@ -1,0 +1,33 @@
+{
+  "salesForceApp": {
+    "incentive": {
+      "home": {
+        "title": "Incentives",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Incentive",
+        "createOrEditLabel": "Create or edit a Incentive",
+        "notFound": "No Incentives found"
+      },
+      "created": "A new Incentive is created with identifier {{ param }}",
+      "updated": "A Incentive is updated with identifier {{ param }}",
+      "deleted": "A Incentive is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Incentive {{ id }}?"
+      },
+      "detail": {
+        "title": "Incentive"
+      },
+      "id": "ID",
+      "achivementPercent": "Achivement Percent",
+      "value": "Value",
+      "isActive": "Is Active",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "createdBy": "Created By",
+      "updatedBy": "Updated By",
+      "scheme": "Scheme",
+      "salesAgent": "Sales Agent",
+      "approvedBy": "Approved By"
+    }
+  }
+}

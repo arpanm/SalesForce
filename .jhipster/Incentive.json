@@ -1,0 +1,63 @@
+{
+  "applications": ["SalesForce"],
+  "changelogDate": "20230115094527",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "incentive",
+  "fields": [
+    {
+      "fieldName": "achivementPercent",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Incentive",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "incentiveScheme",
+      "otherEntityRelationshipName": "incentives",
+      "relationshipName": "scheme",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "salesForceUser",
+      "otherEntityRelationshipName": "incentives",
+      "relationshipName": "salesAgent",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "salesForceUser",
+      "otherEntityRelationshipName": "approvedIncentives",
+      "relationshipName": "approvedBy",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

@@ -48,6 +48,25 @@ public class CacheConfiguration {
             createCache(cm, com.ril.digital.salesforce.domain.User.class.getName());
             createCache(cm, com.ril.digital.salesforce.domain.Authority.class.getName());
             createCache(cm, com.ril.digital.salesforce.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.ril.digital.salesforce.domain.SalesForceUser.class.getName());
+            createCache(cm, com.ril.digital.salesforce.domain.SalesForceUser.class.getName() + ".subordinates");
+            createCache(cm, com.ril.digital.salesforce.domain.SalesForceUser.class.getName() + ".approvedSalesTargets");
+            createCache(cm, com.ril.digital.salesforce.domain.SalesForceUser.class.getName() + ".approvedIncentiveSchemes");
+            createCache(cm, com.ril.digital.salesforce.domain.SalesForceUser.class.getName() + ".retailerMappings");
+            createCache(cm, com.ril.digital.salesforce.domain.SalesForceUser.class.getName() + ".approvedRetailerMappings");
+            createCache(cm, com.ril.digital.salesforce.domain.SalesForceUser.class.getName() + ".achivementCaches");
+            createCache(cm, com.ril.digital.salesforce.domain.SalesForceUser.class.getName() + ".incentives");
+            createCache(cm, com.ril.digital.salesforce.domain.SalesForceUser.class.getName() + ".approvedIncentives");
+            createCache(cm, com.ril.digital.salesforce.domain.SalesTarget.class.getName());
+            createCache(cm, com.ril.digital.salesforce.domain.SalesTarget.class.getName() + ".filters");
+            createCache(cm, com.ril.digital.salesforce.domain.SalesTarget.class.getName() + ".incentiveSchemes");
+            createCache(cm, com.ril.digital.salesforce.domain.SalesTargetFilter.class.getName());
+            createCache(cm, com.ril.digital.salesforce.domain.IncentiveScheme.class.getName());
+            createCache(cm, com.ril.digital.salesforce.domain.IncentiveScheme.class.getName() + ".incentives");
+            createCache(cm, com.ril.digital.salesforce.domain.RetailerMapping.class.getName());
+            createCache(cm, com.ril.digital.salesforce.domain.OrderCache.class.getName());
+            createCache(cm, com.ril.digital.salesforce.domain.AchivementCache.class.getName());
+            createCache(cm, com.ril.digital.salesforce.domain.Incentive.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
