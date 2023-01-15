@@ -134,8 +134,8 @@ export const SalesForceUser = () => {
                   <th className="hand" onClick={sort('phone')}>
                     <Translate contentKey="salesForceApp.salesForceUser.phone">Phone</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
-                  <th className="hand" onClick={sort('role')}>
-                    <Translate contentKey="salesForceApp.salesForceUser.role">Role</Translate> <FontAwesomeIcon icon="sort" />
+                  <th className="hand" onClick={sort('userRole')}>
+                    <Translate contentKey="salesForceApp.salesForceUser.userRole">User Role</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
                   <th className="hand" onClick={sort('dateOfJoining')}>
                     <Translate contentKey="salesForceApp.salesForceUser.dateOfJoining">Date Of Joining</Translate>{' '}
@@ -177,7 +177,7 @@ export const SalesForceUser = () => {
                     <td>{salesForceUser.email}</td>
                     <td>{salesForceUser.phone}</td>
                     <td>
-                      <Translate contentKey={`salesForceApp.Role.${salesForceUser.role}`} />
+                      <Translate contentKey={`salesForceApp.Role.${salesForceUser.userRole}`} />
                     </td>
                     <td>
                       {salesForceUser.dateOfJoining ? (

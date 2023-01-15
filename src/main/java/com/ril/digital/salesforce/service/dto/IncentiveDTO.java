@@ -14,7 +14,7 @@ public class IncentiveDTO implements Serializable {
 
     private Float achivementPercent;
 
-    private Float value;
+    private Float incentiveValue;
 
     private Boolean isActive;
 
@@ -48,12 +48,12 @@ public class IncentiveDTO implements Serializable {
         this.achivementPercent = achivementPercent;
     }
 
-    public Float getValue() {
-        return value;
+    public Float getIncentiveValue() {
+        return incentiveValue;
     }
 
-    public void setValue(Float value) {
-        this.value = value;
+    public void setIncentiveValue(Float incentiveValue) {
+        this.incentiveValue = incentiveValue;
     }
 
     public Boolean getIsActive() {
@@ -147,7 +147,7 @@ public class IncentiveDTO implements Serializable {
         return "IncentiveDTO{" +
             "id=" + getId() +
             ", achivementPercent=" + getAchivementPercent() +
-            ", value=" + getValue() +
+            ", incentiveValue=" + getIncentiveValue() +
             ", isActive='" + getIsActive() + "'" +
             ", createdAt='" + getCreatedAt() + "'" +
             ", updatedAt='" + getUpdatedAt() + "'" +

@@ -24,7 +24,7 @@
       "fieldValidateRulesMin": "1000000000"
     },
     {
-      "fieldName": "role",
+      "fieldName": "userRole",
       "fieldType": "Role",
       "fieldValues": "SuperAdmin,HRAdmin,SalesAdmin,RegionalHead,StateHead,AOL,JMDL,JMDO,Other"
     },

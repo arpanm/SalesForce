@@ -41,8 +41,8 @@ public class SalesTarget implements Serializable {
     private LocalDate endDate;
 
     @NotNull
-    @Column(name = "value", nullable = false)
-    private Float value;
+    @Column(name = "target_value", nullable = false)
+    private Float targetValue;
 
     @Column(name = "is_active")
     private Boolean isActive;
@@ -140,17 +140,17 @@ public class SalesTarget implements Serializable {
         this.endDate = endDate;
     }
 
-    public Float getValue() {
-        return this.value;
+    public Float getTargetValue() {
+        return this.targetValue;
     }
 
-    public SalesTarget value(Float value) {
-        this.setValue(value);
+    public SalesTarget targetValue(Float targetValue) {
+        this.setTargetValue(targetValue);
         return this;
     }
 
-    public void setValue(Float value) {
-        this.value = value;
+    public void setTargetValue(Float targetValue) {
+        this.targetValue = targetValue;
     }
 
     public Boolean getIsActive() {
@@ -320,7 +320,7 @@ public class SalesTarget implements Serializable {
             ", type='" + getType() + "'" +
             ", startDate='" + getStartDate() + "'" +
             ", endDate='" + getEndDate() + "'" +
-            ", value=" + getValue() +
+            ", targetValue=" + getTargetValue() +
             ", isActive='" + getIsActive() + "'" +
             ", createdAt='" + getCreatedAt() + "'" +
             ", updatedAt='" + getUpdatedAt() + "'" +

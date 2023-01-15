@@ -17,7 +17,7 @@
             <column name="achivement_percent" type="${floatType}">
                 <constraints nullable="true" />
             </column>
-            <column name="value" type="${floatType}">
+            <column name="incentive_value" type="${floatType}">
                 <constraints nullable="true" />
             </column>
             <column name="is_active" type="boolean">
@@ -66,7 +66,7 @@
                   usePreparedStatements="true">
             <column name="id" type="numeric"/>
             <column name="achivement_percent" type="numeric"/>
-            <column name="value" type="numeric"/>
+            <column name="incentive_value" type="numeric"/>
             <column name="is_active" type="boolean"/>
             <column name="created_at" type="date"/>
             <column name="updated_at" type="date"/>

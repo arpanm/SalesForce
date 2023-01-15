@@ -43,8 +43,8 @@ class IncentiveSchemeResourceIT {
     private static final Float DEFAULT_MAX_ACHIVEMENT_PERCENT = 1F;
     private static final Float UPDATED_MAX_ACHIVEMENT_PERCENT = 2F;
 
-    private static final Float DEFAULT_VALUE = 1F;
-    private static final Float UPDATED_VALUE = 2F;
+    private static final Float DEFAULT_SCHEME_VALUE = 1F;
+    private static final Float UPDATED_SCHEME_VALUE = 2F;
 
     private static final Boolean DEFAULT_IS_ACTIVE = false;
     private static final Boolean UPDATED_IS_ACTIVE = true;
@@ -92,7 +92,7 @@ class IncentiveSchemeResourceIT {
             .type(DEFAULT_TYPE)
             .minAchivementPercent(DEFAULT_MIN_ACHIVEMENT_PERCENT)
             .maxAchivementPercent(DEFAULT_MAX_ACHIVEMENT_PERCENT)
-            .value(DEFAULT_VALUE)
+            .schemeValue(DEFAULT_SCHEME_VALUE)
             .isActive(DEFAULT_IS_ACTIVE)
             .createdAt(DEFAULT_CREATED_AT)
             .updatedAt(DEFAULT_UPDATED_AT)
@@ -112,7 +112,7 @@ class IncentiveSchemeResourceIT {
             .type(UPDATED_TYPE)
             .minAchivementPercent(UPDATED_MIN_ACHIVEMENT_PERCENT)
             .maxAchivementPercent(UPDATED_MAX_ACHIVEMENT_PERCENT)
-            .value(UPDATED_VALUE)
+            .schemeValue(UPDATED_SCHEME_VALUE)
             .isActive(UPDATED_IS_ACTIVE)
             .createdAt(UPDATED_CREATED_AT)
             .updatedAt(UPDATED_UPDATED_AT)
@@ -145,7 +145,7 @@ class IncentiveSchemeResourceIT {
         assertThat(testIncentiveScheme.getType()).isEqualTo(DEFAULT_TYPE);
         assertThat(testIncentiveScheme.getMinAchivementPercent()).isEqualTo(DEFAULT_MIN_ACHIVEMENT_PERCENT);
         assertThat(testIncentiveScheme.getMaxAchivementPercent()).isEqualTo(DEFAULT_MAX_ACHIVEMENT_PERCENT);
-        assertThat(testIncentiveScheme.getValue()).isEqualTo(DEFAULT_VALUE);
+        assertThat(testIncentiveScheme.getSchemeValue()).isEqualTo(DEFAULT_SCHEME_VALUE);
         assertThat(testIncentiveScheme.getIsActive()).isEqualTo(DEFAULT_IS_ACTIVE);
         assertThat(testIncentiveScheme.getCreatedAt()).isEqualTo(DEFAULT_CREATED_AT);
         assertThat(testIncentiveScheme.getUpdatedAt()).isEqualTo(DEFAULT_UPDATED_AT);
@@ -189,7 +189,7 @@ class IncentiveSchemeResourceIT {
             .andExpect(jsonPath("$.[*].type").value(hasItem(DEFAULT_TYPE.toString())))
             .andExpect(jsonPath("$.[*].minAchivementPercent").value(hasItem(DEFAULT_MIN_ACHIVEMENT_PERCENT.doubleValue())))
             .andExpect(jsonPath("$.[*].maxAchivementPercent").value(hasItem(DEFAULT_MAX_ACHIVEMENT_PERCENT.doubleValue())))
-            .andExpect(jsonPath("$.[*].value").value(hasItem(DEFAULT_VALUE.doubleValue())))
+            .andExpect(jsonPath("$.[*].schemeValue").value(hasItem(DEFAULT_SCHEME_VALUE.doubleValue())))
             .andExpect(jsonPath("$.[*].isActive").value(hasItem(DEFAULT_IS_ACTIVE.booleanValue())))
             .andExpect(jsonPath("$.[*].createdAt").value(hasItem(DEFAULT_CREATED_AT.toString())))
             .andExpect(jsonPath("$.[*].updatedAt").value(hasItem(DEFAULT_UPDATED_AT.toString())))
@@ -212,7 +212,7 @@ class IncentiveSchemeResourceIT {
             .andExpect(jsonPath("$.type").value(DEFAULT_TYPE.toString()))
             .andExpect(jsonPath("$.minAchivementPercent").value(DEFAULT_MIN_ACHIVEMENT_PERCENT.doubleValue()))
             .andExpect(jsonPath("$.maxAchivementPercent").value(DEFAULT_MAX_ACHIVEMENT_PERCENT.doubleValue()))
-            .andExpect(jsonPath("$.value").value(DEFAULT_VALUE.doubleValue()))
+            .andExpect(jsonPath("$.schemeValue").value(DEFAULT_SCHEME_VALUE.doubleValue()))
             .andExpect(jsonPath("$.isActive").value(DEFAULT_IS_ACTIVE.booleanValue()))
             .andExpect(jsonPath("$.createdAt").value(DEFAULT_CREATED_AT.toString()))
             .andExpect(jsonPath("$.updatedAt").value(DEFAULT_UPDATED_AT.toString()))
@@ -243,7 +243,7 @@ class IncentiveSchemeResourceIT {
             .type(UPDATED_TYPE)
             .minAchivementPercent(UPDATED_MIN_ACHIVEMENT_PERCENT)
             .maxAchivementPercent(UPDATED_MAX_ACHIVEMENT_PERCENT)
-            .value(UPDATED_VALUE)
+            .schemeValue(UPDATED_SCHEME_VALUE)
             .isActive(UPDATED_IS_ACTIVE)
             .createdAt(UPDATED_CREATED_AT)
             .updatedAt(UPDATED_UPDATED_AT)
@@ -266,7 +266,7 @@ class IncentiveSchemeResourceIT {
         assertThat(testIncentiveScheme.getType()).isEqualTo(UPDATED_TYPE);
         assertThat(testIncentiveScheme.getMinAchivementPercent()).isEqualTo(UPDATED_MIN_ACHIVEMENT_PERCENT);
         assertThat(testIncentiveScheme.getMaxAchivementPercent()).isEqualTo(UPDATED_MAX_ACHIVEMENT_PERCENT);
-        assertThat(testIncentiveScheme.getValue()).isEqualTo(UPDATED_VALUE);
+        assertThat(testIncentiveScheme.getSchemeValue()).isEqualTo(UPDATED_SCHEME_VALUE);
         assertThat(testIncentiveScheme.getIsActive()).isEqualTo(UPDATED_IS_ACTIVE);
         assertThat(testIncentiveScheme.getCreatedAt()).isEqualTo(UPDATED_CREATED_AT);
         assertThat(testIncentiveScheme.getUpdatedAt()).isEqualTo(UPDATED_UPDATED_AT);
@@ -370,7 +370,7 @@ class IncentiveSchemeResourceIT {
         assertThat(testIncentiveScheme.getType()).isEqualTo(UPDATED_TYPE);
         assertThat(testIncentiveScheme.getMinAchivementPercent()).isEqualTo(UPDATED_MIN_ACHIVEMENT_PERCENT);
         assertThat(testIncentiveScheme.getMaxAchivementPercent()).isEqualTo(DEFAULT_MAX_ACHIVEMENT_PERCENT);
-        assertThat(testIncentiveScheme.getValue()).isEqualTo(DEFAULT_VALUE);
+        assertThat(testIncentiveScheme.getSchemeValue()).isEqualTo(DEFAULT_SCHEME_VALUE);
         assertThat(testIncentiveScheme.getIsActive()).isEqualTo(DEFAULT_IS_ACTIVE);
         assertThat(testIncentiveScheme.getCreatedAt()).isEqualTo(UPDATED_CREATED_AT);
         assertThat(testIncentiveScheme.getUpdatedAt()).isEqualTo(DEFAULT_UPDATED_AT);
@@ -394,7 +394,7 @@ class IncentiveSchemeResourceIT {
             .type(UPDATED_TYPE)
             .minAchivementPercent(UPDATED_MIN_ACHIVEMENT_PERCENT)
             .maxAchivementPercent(UPDATED_MAX_ACHIVEMENT_PERCENT)
-            .value(UPDATED_VALUE)
+            .schemeValue(UPDATED_SCHEME_VALUE)
             .isActive(UPDATED_IS_ACTIVE)
             .createdAt(UPDATED_CREATED_AT)
             .updatedAt(UPDATED_UPDATED_AT)
@@ -416,7 +416,7 @@ class IncentiveSchemeResourceIT {
         assertThat(testIncentiveScheme.getType()).isEqualTo(UPDATED_TYPE);
         assertThat(testIncentiveScheme.getMinAchivementPercent()).isEqualTo(UPDATED_MIN_ACHIVEMENT_PERCENT);
         assertThat(testIncentiveScheme.getMaxAchivementPercent()).isEqualTo(UPDATED_MAX_ACHIVEMENT_PERCENT);
-        assertThat(testIncentiveScheme.getValue()).isEqualTo(UPDATED_VALUE);
+        assertThat(testIncentiveScheme.getSchemeValue()).isEqualTo(UPDATED_SCHEME_VALUE);
         assertThat(testIncentiveScheme.getIsActive()).isEqualTo(UPDATED_IS_ACTIVE);
         assertThat(testIncentiveScheme.getCreatedAt()).isEqualTo(UPDATED_CREATED_AT);
         assertThat(testIncentiveScheme.getUpdatedAt()).isEqualTo(UPDATED_UPDATED_AT);

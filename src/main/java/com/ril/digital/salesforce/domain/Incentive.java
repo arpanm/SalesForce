@@ -27,8 +27,8 @@ public class Incentive implements Serializable {
     @Column(name = "achivement_percent")
     private Float achivementPercent;
 
-    @Column(name = "value")
-    private Float value;
+    @Column(name = "incentive_value")
+    private Float incentiveValue;
 
     @Column(name = "is_active")
     private Boolean isActive;
@@ -111,17 +111,17 @@ public class Incentive implements Serializable {
         this.achivementPercent = achivementPercent;
     }
 
-    public Float getValue() {
-        return this.value;
+    public Float getIncentiveValue() {
+        return this.incentiveValue;
     }
 
-    public Incentive value(Float value) {
-        this.setValue(value);
+    public Incentive incentiveValue(Float incentiveValue) {
+        this.setIncentiveValue(incentiveValue);
         return this;
     }
 
-    public void setValue(Float value) {
-        this.value = value;
+    public void setIncentiveValue(Float incentiveValue) {
+        this.incentiveValue = incentiveValue;
     }
 
     public Boolean getIsActive() {
@@ -253,7 +253,7 @@ public class Incentive implements Serializable {
         return "Incentive{" +
             "id=" + getId() +
             ", achivementPercent=" + getAchivementPercent() +
-            ", value=" + getValue() +
+            ", incentiveValue=" + getIncentiveValue() +
             ", isActive='" + getIsActive() + "'" +
             ", createdAt='" + getCreatedAt() + "'" +
             ", updatedAt='" + getUpdatedAt() + "'" +

@@ -44,8 +44,8 @@ public class SalesForceUser implements Serializable {
     private Long phone;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "role")
-    private Role role;
+    @Column(name = "user_role")
+    private Role userRole;
 
     @Column(name = "date_of_joining")
     private LocalDate dateOfJoining;
@@ -192,17 +192,17 @@ public class SalesForceUser implements Serializable {
         this.phone = phone;
     }
 
-    public Role getRole() {
-        return this.role;
+    public Role getUserRole() {
+        return this.userRole;
     }
 
-    public SalesForceUser role(Role role) {
-        this.setRole(role);
+    public SalesForceUser userRole(Role userRole) {
+        this.setUserRole(userRole);
         return this;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
+    public void setUserRole(Role userRole) {
+        this.userRole = userRole;
     }
 
     public LocalDate getDateOfJoining() {
@@ -584,7 +584,7 @@ public class SalesForceUser implements Serializable {
             ", name='" + getName() + "'" +
             ", email='" + getEmail() + "'" +
             ", phone=" + getPhone() +
-            ", role='" + getRole() + "'" +
+            ", userRole='" + getUserRole() + "'" +
             ", dateOfJoining='" + getDateOfJoining() + "'" +
             ", dateOfExit='" + getDateOfExit() + "'" +
             ", isActive='" + getIsActive() + "'" +

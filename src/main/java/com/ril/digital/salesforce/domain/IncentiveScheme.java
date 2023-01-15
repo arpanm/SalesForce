@@ -37,8 +37,8 @@ public class IncentiveScheme implements Serializable {
     @Column(name = "max_achivement_percent")
     private Float maxAchivementPercent;
 
-    @Column(name = "value")
-    private Float value;
+    @Column(name = "scheme_value")
+    private Float schemeValue;
 
     @Column(name = "is_active")
     private Boolean isActive;
@@ -135,17 +135,17 @@ public class IncentiveScheme implements Serializable {
         this.maxAchivementPercent = maxAchivementPercent;
     }
 
-    public Float getValue() {
-        return this.value;
+    public Float getSchemeValue() {
+        return this.schemeValue;
     }
 
-    public IncentiveScheme value(Float value) {
-        this.setValue(value);
+    public IncentiveScheme schemeValue(Float schemeValue) {
+        this.setSchemeValue(schemeValue);
         return this;
     }
 
-    public void setValue(Float value) {
-        this.value = value;
+    public void setSchemeValue(Float schemeValue) {
+        this.schemeValue = schemeValue;
     }
 
     public Boolean getIsActive() {
@@ -297,7 +297,7 @@ public class IncentiveScheme implements Serializable {
             ", type='" + getType() + "'" +
             ", minAchivementPercent=" + getMinAchivementPercent() +
             ", maxAchivementPercent=" + getMaxAchivementPercent() +
-            ", value=" + getValue() +
+            ", schemeValue=" + getSchemeValue() +
             ", isActive='" + getIsActive() + "'" +
             ", createdAt='" + getCreatedAt() + "'" +
             ", updatedAt='" + getUpdatedAt() + "'" +

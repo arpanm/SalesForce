@@ -43,8 +43,8 @@ class SalesForceUserResourceIT {
     private static final Long DEFAULT_PHONE = 1000000000L;
     private static final Long UPDATED_PHONE = 1000000001L;
 
-    private static final Role DEFAULT_ROLE = Role.SuperAdmin;
-    private static final Role UPDATED_ROLE = Role.HRAdmin;
+    private static final Role DEFAULT_USER_ROLE = Role.SuperAdmin;
+    private static final Role UPDATED_USER_ROLE = Role.HRAdmin;
 
     private static final LocalDate DEFAULT_DATE_OF_JOINING = LocalDate.ofEpochDay(0L);
     private static final LocalDate UPDATED_DATE_OF_JOINING = LocalDate.now(ZoneId.systemDefault());
@@ -98,7 +98,7 @@ class SalesForceUserResourceIT {
             .name(DEFAULT_NAME)
             .email(DEFAULT_EMAIL)
             .phone(DEFAULT_PHONE)
-            .role(DEFAULT_ROLE)
+            .userRole(DEFAULT_USER_ROLE)
             .dateOfJoining(DEFAULT_DATE_OF_JOINING)
             .dateOfExit(DEFAULT_DATE_OF_EXIT)
             .isActive(DEFAULT_IS_ACTIVE)
@@ -120,7 +120,7 @@ class SalesForceUserResourceIT {
             .name(UPDATED_NAME)
             .email(UPDATED_EMAIL)
             .phone(UPDATED_PHONE)
-            .role(UPDATED_ROLE)
+            .userRole(UPDATED_USER_ROLE)
             .dateOfJoining(UPDATED_DATE_OF_JOINING)
             .dateOfExit(UPDATED_DATE_OF_EXIT)
             .isActive(UPDATED_IS_ACTIVE)
@@ -155,7 +155,7 @@ class SalesForceUserResourceIT {
         assertThat(testSalesForceUser.getName()).isEqualTo(DEFAULT_NAME);
         assertThat(testSalesForceUser.getEmail()).isEqualTo(DEFAULT_EMAIL);
         assertThat(testSalesForceUser.getPhone()).isEqualTo(DEFAULT_PHONE);
-        assertThat(testSalesForceUser.getRole()).isEqualTo(DEFAULT_ROLE);
+        assertThat(testSalesForceUser.getUserRole()).isEqualTo(DEFAULT_USER_ROLE);
         assertThat(testSalesForceUser.getDateOfJoining()).isEqualTo(DEFAULT_DATE_OF_JOINING);
         assertThat(testSalesForceUser.getDateOfExit()).isEqualTo(DEFAULT_DATE_OF_EXIT);
         assertThat(testSalesForceUser.getIsActive()).isEqualTo(DEFAULT_IS_ACTIVE);
@@ -261,7 +261,7 @@ class SalesForceUserResourceIT {
             .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME)))
             .andExpect(jsonPath("$.[*].email").value(hasItem(DEFAULT_EMAIL)))
             .andExpect(jsonPath("$.[*].phone").value(hasItem(DEFAULT_PHONE.intValue())))
-            .andExpect(jsonPath("$.[*].role").value(hasItem(DEFAULT_ROLE.toString())))
+            .andExpect(jsonPath("$.[*].userRole").value(hasItem(DEFAULT_USER_ROLE.toString())))
             .andExpect(jsonPath("$.[*].dateOfJoining").value(hasItem(DEFAULT_DATE_OF_JOINING.toString())))
             .andExpect(jsonPath("$.[*].dateOfExit").value(hasItem(DEFAULT_DATE_OF_EXIT.toString())))
             .andExpect(jsonPath("$.[*].isActive").value(hasItem(DEFAULT_IS_ACTIVE.booleanValue())))
@@ -286,7 +286,7 @@ class SalesForceUserResourceIT {
             .andExpect(jsonPath("$.name").value(DEFAULT_NAME))
             .andExpect(jsonPath("$.email").value(DEFAULT_EMAIL))
             .andExpect(jsonPath("$.phone").value(DEFAULT_PHONE.intValue()))
-            .andExpect(jsonPath("$.role").value(DEFAULT_ROLE.toString()))
+            .andExpect(jsonPath("$.userRole").value(DEFAULT_USER_ROLE.toString()))
             .andExpect(jsonPath("$.dateOfJoining").value(DEFAULT_DATE_OF_JOINING.toString()))
             .andExpect(jsonPath("$.dateOfExit").value(DEFAULT_DATE_OF_EXIT.toString()))
             .andExpect(jsonPath("$.isActive").value(DEFAULT_IS_ACTIVE.booleanValue()))
@@ -319,7 +319,7 @@ class SalesForceUserResourceIT {
             .name(UPDATED_NAME)
             .email(UPDATED_EMAIL)
             .phone(UPDATED_PHONE)
-            .role(UPDATED_ROLE)
+            .userRole(UPDATED_USER_ROLE)
             .dateOfJoining(UPDATED_DATE_OF_JOINING)
             .dateOfExit(UPDATED_DATE_OF_EXIT)
             .isActive(UPDATED_IS_ACTIVE)
@@ -344,7 +344,7 @@ class SalesForceUserResourceIT {
         assertThat(testSalesForceUser.getName()).isEqualTo(UPDATED_NAME);
         assertThat(testSalesForceUser.getEmail()).isEqualTo(UPDATED_EMAIL);
         assertThat(testSalesForceUser.getPhone()).isEqualTo(UPDATED_PHONE);
-        assertThat(testSalesForceUser.getRole()).isEqualTo(UPDATED_ROLE);
+        assertThat(testSalesForceUser.getUserRole()).isEqualTo(UPDATED_USER_ROLE);
         assertThat(testSalesForceUser.getDateOfJoining()).isEqualTo(UPDATED_DATE_OF_JOINING);
         assertThat(testSalesForceUser.getDateOfExit()).isEqualTo(UPDATED_DATE_OF_EXIT);
         assertThat(testSalesForceUser.getIsActive()).isEqualTo(UPDATED_IS_ACTIVE);
@@ -456,7 +456,7 @@ class SalesForceUserResourceIT {
         assertThat(testSalesForceUser.getName()).isEqualTo(UPDATED_NAME);
         assertThat(testSalesForceUser.getEmail()).isEqualTo(DEFAULT_EMAIL);
         assertThat(testSalesForceUser.getPhone()).isEqualTo(UPDATED_PHONE);
-        assertThat(testSalesForceUser.getRole()).isEqualTo(DEFAULT_ROLE);
+        assertThat(testSalesForceUser.getUserRole()).isEqualTo(DEFAULT_USER_ROLE);
         assertThat(testSalesForceUser.getDateOfJoining()).isEqualTo(DEFAULT_DATE_OF_JOINING);
         assertThat(testSalesForceUser.getDateOfExit()).isEqualTo(DEFAULT_DATE_OF_EXIT);
         assertThat(testSalesForceUser.getIsActive()).isEqualTo(UPDATED_IS_ACTIVE);
@@ -482,7 +482,7 @@ class SalesForceUserResourceIT {
             .name(UPDATED_NAME)
             .email(UPDATED_EMAIL)
             .phone(UPDATED_PHONE)
-            .role(UPDATED_ROLE)
+            .userRole(UPDATED_USER_ROLE)
             .dateOfJoining(UPDATED_DATE_OF_JOINING)
             .dateOfExit(UPDATED_DATE_OF_EXIT)
             .isActive(UPDATED_IS_ACTIVE)
@@ -506,7 +506,7 @@ class SalesForceUserResourceIT {
         assertThat(testSalesForceUser.getName()).isEqualTo(UPDATED_NAME);
         assertThat(testSalesForceUser.getEmail()).isEqualTo(UPDATED_EMAIL);
         assertThat(testSalesForceUser.getPhone()).isEqualTo(UPDATED_PHONE);
-        assertThat(testSalesForceUser.getRole()).isEqualTo(UPDATED_ROLE);
+        assertThat(testSalesForceUser.getUserRole()).isEqualTo(UPDATED_USER_ROLE);
         assertThat(testSalesForceUser.getDateOfJoining()).isEqualTo(UPDATED_DATE_OF_JOINING);
         assertThat(testSalesForceUser.getDateOfExit()).isEqualTo(UPDATED_DATE_OF_EXIT);
         assertThat(testSalesForceUser.getIsActive()).isEqualTo(UPDATED_IS_ACTIVE);

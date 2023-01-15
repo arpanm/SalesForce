@@ -129,10 +129,10 @@ export const SalesTargetUpdate = () => {
                 }}
               />
               <ValidatedField
-                label={translate('salesForceApp.salesTarget.value')}
-                id="sales-target-value"
-                name="value"
-                data-cy="value"
+                label={translate('salesForceApp.salesTarget.targetValue')}
+                id="sales-target-targetValue"
+                name="targetValue"
+                data-cy="targetValue"
                 type="text"
                 validate={{
                   required: { value: true, message: translate('entity.validation.required') },

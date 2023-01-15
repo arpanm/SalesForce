@@ -108,10 +108,10 @@ export const IncentiveUpdate = () => {
                 type="text"
               />
               <ValidatedField
-                label={translate('salesForceApp.incentive.value')}
-                id="incentive-value"
-                name="value"
-                data-cy="value"
+                label={translate('salesForceApp.incentive.incentiveValue')}
+                id="incentive-incentiveValue"
+                name="incentiveValue"
+                data-cy="incentiveValue"
                 type="text"
               />
               <ValidatedField

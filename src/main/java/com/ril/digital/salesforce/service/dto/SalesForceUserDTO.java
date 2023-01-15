@@ -26,7 +26,7 @@ public class SalesForceUserDTO implements Serializable {
     @Max(value = 9999999999L)
     private Long phone;
 
-    private Role role;
+    private Role userRole;
 
     private LocalDate dateOfJoining;
 
@@ -76,12 +76,12 @@ public class SalesForceUserDTO implements Serializable {
         this.phone = phone;
     }
 
-    public Role getRole() {
-        return role;
+    public Role getUserRole() {
+        return userRole;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
+    public void setUserRole(Role userRole) {
+        this.userRole = userRole;
     }
 
     public LocalDate getDateOfJoining() {
@@ -177,7 +177,7 @@ public class SalesForceUserDTO implements Serializable {
             ", name='" + getName() + "'" +
             ", email='" + getEmail() + "'" +
             ", phone=" + getPhone() +
-            ", role='" + getRole() + "'" +
+            ", userRole='" + getUserRole() + "'" +
             ", dateOfJoining='" + getDateOfJoining() + "'" +
             ", dateOfExit='" + getDateOfExit() + "'" +
             ", isActive='" + getIsActive() + "'" +

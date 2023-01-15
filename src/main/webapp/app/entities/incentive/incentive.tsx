@@ -129,8 +129,9 @@ export const Incentive = () => {
                     <Translate contentKey="salesForceApp.incentive.achivementPercent">Achivement Percent</Translate>{' '}
                     <FontAwesomeIcon icon="sort" />
                   </th>
-                  <th className="hand" onClick={sort('value')}>
-                    <Translate contentKey="salesForceApp.incentive.value">Value</Translate> <FontAwesomeIcon icon="sort" />
+                  <th className="hand" onClick={sort('incentiveValue')}>
+                    <Translate contentKey="salesForceApp.incentive.incentiveValue">Incentive Value</Translate>{' '}
+                    <FontAwesomeIcon icon="sort" />
                   </th>
                   <th className="hand" onClick={sort('isActive')}>
                     <Translate contentKey="salesForceApp.incentive.isActive">Is Active</Translate> <FontAwesomeIcon icon="sort" />
@@ -168,7 +169,7 @@ export const Incentive = () => {
                       </Button>
                     </td>
                     <td>{incentive.achivementPercent}</td>
-                    <td>{incentive.value}</td>
+                    <td>{incentive.incentiveValue}</td>
                     <td>{incentive.isActive ? 'true' : 'false'}</td>
                     <td>
                       {incentive.createdAt ? <TextFormat type="date" value={incentive.createdAt} format={APP_LOCAL_DATE_FORMAT} /> : null}

@@ -51,11 +51,11 @@ export const IncentiveSchemeDetail = () => {
           </dt>
           <dd>{incentiveSchemeEntity.maxAchivementPercent}</dd>
           <dt>
-            <span id="value">
-              <Translate contentKey="salesForceApp.incentiveScheme.value">Value</Translate>
+            <span id="schemeValue">
+              <Translate contentKey="salesForceApp.incentiveScheme.schemeValue">Scheme Value</Translate>
             </span>
           </dt>
-          <dd>{incentiveSchemeEntity.value}</dd>
+          <dd>{incentiveSchemeEntity.schemeValue}</dd>
           <dt>
             <span id="isActive">
               <Translate contentKey="salesForceApp.incentiveScheme.isActive">Is Active</Translate>

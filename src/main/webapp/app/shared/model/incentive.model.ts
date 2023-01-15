@@ -5,7 +5,7 @@ import { ISalesForceUser } from 'app/shared/model/sales-force-user.model';
 export interface IIncentive {
   id?: number;
   achivementPercent?: number | null;
-  value?: number | null;
+  incentiveValue?: number | null;
   isActive?: boolean | null;
   createdAt?: string | null;
   updatedAt?: string | null;
