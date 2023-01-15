@@ -59,6 +59,10 @@
       "fieldType": "String"
     },
     {
+      "fieldName": "rigion",
+      "fieldType": "String"
+    },
+    {
       "fieldName": "join",
       "fieldType": "FilterJoinType",
       "fieldValues": "AND,OR"

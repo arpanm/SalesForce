@@ -185,6 +185,9 @@ export const SalesTargetFilter = () => {
                   <th className="hand" onClick={sort('state')}>
                     <Translate contentKey="salesForceApp.salesTargetFilter.state">State</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
+                  <th className="hand" onClick={sort('rigion')}>
+                    <Translate contentKey="salesForceApp.salesTargetFilter.rigion">Rigion</Translate> <FontAwesomeIcon icon="sort" />
+                  </th>
                   <th className="hand" onClick={sort('join')}>
                     <Translate contentKey="salesForceApp.salesTargetFilter.join">Join</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
@@ -232,6 +235,7 @@ export const SalesTargetFilter = () => {
                     <td>{salesTargetFilter.perRetailerDailyArticleMinQty}</td>
                     <td>{salesTargetFilter.perRetailerDailyArticleMaxQty}</td>
                     <td>{salesTargetFilter.state}</td>
+                    <td>{salesTargetFilter.rigion}</td>
                     <td>
                       <Translate contentKey={`salesForceApp.FilterJoinType.${salesTargetFilter.join}`} />
                     </td>

@@ -140,6 +140,9 @@ export const RetailerMapping = () => {
                   <th className="hand" onClick={sort('state')}>
                     <Translate contentKey="salesForceApp.retailerMapping.state">State</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
+                  <th className="hand" onClick={sort('region')}>
+                    <Translate contentKey="salesForceApp.retailerMapping.region">Region</Translate> <FontAwesomeIcon icon="sort" />
+                  </th>
                   <th className="hand" onClick={sort('registedOn')}>
                     <Translate contentKey="salesForceApp.retailerMapping.registedOn">Registed On</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
@@ -187,6 +190,7 @@ export const RetailerMapping = () => {
                     <td>{retailerMapping.agentCode}</td>
                     <td>{retailerMapping.pincode}</td>
                     <td>{retailerMapping.state}</td>
+                    <td>{retailerMapping.region}</td>
                     <td>
                       {retailerMapping.registedOn ? (
                         <TextFormat type="date" value={retailerMapping.registedOn} format={APP_LOCAL_DATE_FORMAT} />

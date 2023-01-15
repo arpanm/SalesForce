@@ -40,6 +40,8 @@ public class SalesTargetFilterDTO implements Serializable {
 
     private String state;
 
+    private String rigion;
+
     private FilterJoinType join;
 
     private Boolean isActive;
@@ -166,6 +168,14 @@ public class SalesTargetFilterDTO implements Serializable {
         this.state = state;
     }
 
+    public String getRigion() {
+        return rigion;
+    }
+
+    public void setRigion(String rigion) {
+        this.rigion = rigion;
+    }
+
     public FilterJoinType getJoin() {
         return join;
     }
@@ -261,6 +271,7 @@ public class SalesTargetFilterDTO implements Serializable {
             ", perRetailerDailyArticleMinQty=" + getPerRetailerDailyArticleMinQty() +
             ", perRetailerDailyArticleMaxQty=" + getPerRetailerDailyArticleMaxQty() +
             ", state='" + getState() + "'" +
+            ", rigion='" + getRigion() + "'" +
             ", join='" + getJoin() + "'" +
             ", isActive='" + getIsActive() + "'" +
             ", createdAt='" + getCreatedAt() + "'" +

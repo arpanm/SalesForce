@@ -22,6 +22,8 @@ public class RetailerMappingDTO implements Serializable {
 
     private String state;
 
+    private String region;
+
     private LocalDate registedOn;
 
     private LocalDate mappedOn;
@@ -88,6 +90,14 @@ public class RetailerMappingDTO implements Serializable {
 
     public void setState(String state) {
         this.state = state;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
     }
 
     public LocalDate getRegistedOn() {
@@ -201,6 +211,7 @@ public class RetailerMappingDTO implements Serializable {
             ", agentCode='" + getAgentCode() + "'" +
             ", pincode=" + getPincode() +
             ", state='" + getState() + "'" +
+            ", region='" + getRegion() + "'" +
             ", registedOn='" + getRegistedOn() + "'" +
             ", mappedOn='" + getMappedOn() + "'" +
             ", mappedTill='" + getMappedTill() + "'" +

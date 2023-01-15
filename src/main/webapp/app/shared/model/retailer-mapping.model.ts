@@ -8,6 +8,7 @@ export interface IRetailerMapping {
   agentCode?: string | null;
   pincode?: number | null;
   state?: string | null;
+  region?: string | null;
   registedOn?: string | null;
   mappedOn?: string | null;
   mappedTill?: string | null;

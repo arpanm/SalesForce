@@ -39,6 +39,9 @@ public class RetailerMapping implements Serializable {
     @Column(name = "state")
     private String state;
 
+    @Column(name = "region")
+    private String region;
+
     @Column(name = "registed_on")
     private LocalDate registedOn;
 
@@ -175,6 +178,19 @@ public class RetailerMapping implements Serializable {
 
     public void setState(String state) {
         this.state = state;
+    }
+
+    public String getRegion() {
+        return this.region;
+    }
+
+    public RetailerMapping region(String region) {
+        this.setRegion(region);
+        return this;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
     }
 
     public LocalDate getRegistedOn() {
@@ -336,6 +352,7 @@ public class RetailerMapping implements Serializable {
             ", agentCode='" + getAgentCode() + "'" +
             ", pincode=" + getPincode() +
             ", state='" + getState() + "'" +
+            ", region='" + getRegion() + "'" +
             ", registedOn='" + getRegistedOn() + "'" +
             ", mappedOn='" + getMappedOn() + "'" +
             ", mappedTill='" + getMappedTill() + "'" +

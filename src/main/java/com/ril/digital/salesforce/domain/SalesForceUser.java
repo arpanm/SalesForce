@@ -53,6 +53,12 @@ public class SalesForceUser implements Serializable {
     @Column(name = "date_of_exit")
     private LocalDate dateOfExit;
 
+    @Column(name = "state")
+    private String state;
+
+    @Column(name = "region")
+    private String region;
+
     @Column(name = "is_active")
     private Boolean isActive;
 
@@ -229,6 +235,32 @@ public class SalesForceUser implements Serializable {
 
     public void setDateOfExit(LocalDate dateOfExit) {
         this.dateOfExit = dateOfExit;
+    }
+
+    public String getState() {
+        return this.state;
+    }
+
+    public SalesForceUser state(String state) {
+        this.setState(state);
+        return this;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getRegion() {
+        return this.region;
+    }
+
+    public SalesForceUser region(String region) {
+        this.setRegion(region);
+        return this;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
     }
 
     public Boolean getIsActive() {
@@ -587,6 +619,8 @@ public class SalesForceUser implements Serializable {
             ", userRole='" + getUserRole() + "'" +
             ", dateOfJoining='" + getDateOfJoining() + "'" +
             ", dateOfExit='" + getDateOfExit() + "'" +
+            ", state='" + getState() + "'" +
+            ", region='" + getRegion() + "'" +
             ", isActive='" + getIsActive() + "'" +
             ", createdAt='" + getCreatedAt() + "'" +
             ", updatedAt='" + getUpdatedAt() + "'" +

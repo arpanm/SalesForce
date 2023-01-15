@@ -24,6 +24,8 @@
       "userRole": "User Role",
       "dateOfJoining": "Date Of Joining",
       "dateOfExit": "Date Of Exit",
+      "state": "State",
+      "region": "Region",
       "isActive": "Is Active",
       "createdAt": "Created At",
       "updatedAt": "Updated At",

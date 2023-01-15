@@ -37,6 +37,14 @@
       "fieldType": "LocalDate"
     },
     {
+      "fieldName": "state",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "region",
+      "fieldType": "String"
+    },
+    {
       "fieldName": "isActive",
       "fieldType": "Boolean"
     },

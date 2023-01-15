@@ -196,6 +196,13 @@ export const SalesTargetFilterUpdate = () => {
                 type="text"
               />
               <ValidatedField
+                label={translate('salesForceApp.salesTargetFilter.rigion')}
+                id="sales-target-filter-rigion"
+                name="rigion"
+                data-cy="rigion"
+                type="text"
+              />
+              <ValidatedField
                 label={translate('salesForceApp.salesTargetFilter.join')}
                 id="sales-target-filter-join"
                 name="join"

@@ -52,6 +52,12 @@ class SalesForceUserResourceIT {
     private static final LocalDate DEFAULT_DATE_OF_EXIT = LocalDate.ofEpochDay(0L);
     private static final LocalDate UPDATED_DATE_OF_EXIT = LocalDate.now(ZoneId.systemDefault());
 
+    private static final String DEFAULT_STATE = "AAAAAAAAAA";
+    private static final String UPDATED_STATE = "BBBBBBBBBB";
+
+    private static final String DEFAULT_REGION = "AAAAAAAAAA";
+    private static final String UPDATED_REGION = "BBBBBBBBBB";
+
     private static final Boolean DEFAULT_IS_ACTIVE = false;
     private static final Boolean UPDATED_IS_ACTIVE = true;
 
@@ -101,6 +107,8 @@ class SalesForceUserResourceIT {
             .userRole(DEFAULT_USER_ROLE)
             .dateOfJoining(DEFAULT_DATE_OF_JOINING)
             .dateOfExit(DEFAULT_DATE_OF_EXIT)
+            .state(DEFAULT_STATE)
+            .region(DEFAULT_REGION)
             .isActive(DEFAULT_IS_ACTIVE)
             .createdAt(DEFAULT_CREATED_AT)
             .updatedAt(DEFAULT_UPDATED_AT)
@@ -123,6 +131,8 @@ class SalesForceUserResourceIT {
             .userRole(UPDATED_USER_ROLE)
             .dateOfJoining(UPDATED_DATE_OF_JOINING)
             .dateOfExit(UPDATED_DATE_OF_EXIT)
+            .state(UPDATED_STATE)
+            .region(UPDATED_REGION)
             .isActive(UPDATED_IS_ACTIVE)
             .createdAt(UPDATED_CREATED_AT)
             .updatedAt(UPDATED_UPDATED_AT)
@@ -158,6 +168,8 @@ class SalesForceUserResourceIT {
         assertThat(testSalesForceUser.getUserRole()).isEqualTo(DEFAULT_USER_ROLE);
         assertThat(testSalesForceUser.getDateOfJoining()).isEqualTo(DEFAULT_DATE_OF_JOINING);
         assertThat(testSalesForceUser.getDateOfExit()).isEqualTo(DEFAULT_DATE_OF_EXIT);
+        assertThat(testSalesForceUser.getState()).isEqualTo(DEFAULT_STATE);
+        assertThat(testSalesForceUser.getRegion()).isEqualTo(DEFAULT_REGION);
         assertThat(testSalesForceUser.getIsActive()).isEqualTo(DEFAULT_IS_ACTIVE);
         assertThat(testSalesForceUser.getCreatedAt()).isEqualTo(DEFAULT_CREATED_AT);
         assertThat(testSalesForceUser.getUpdatedAt()).isEqualTo(DEFAULT_UPDATED_AT);
@@ -264,6 +276,8 @@ class SalesForceUserResourceIT {
             .andExpect(jsonPath("$.[*].userRole").value(hasItem(DEFAULT_USER_ROLE.toString())))
             .andExpect(jsonPath("$.[*].dateOfJoining").value(hasItem(DEFAULT_DATE_OF_JOINING.toString())))
             .andExpect(jsonPath("$.[*].dateOfExit").value(hasItem(DEFAULT_DATE_OF_EXIT.toString())))
+            .andExpect(jsonPath("$.[*].state").value(hasItem(DEFAULT_STATE)))
+            .andExpect(jsonPath("$.[*].region").value(hasItem(DEFAULT_REGION)))
             .andExpect(jsonPath("$.[*].isActive").value(hasItem(DEFAULT_IS_ACTIVE.booleanValue())))
             .andExpect(jsonPath("$.[*].createdAt").value(hasItem(DEFAULT_CREATED_AT.toString())))
             .andExpect(jsonPath("$.[*].updatedAt").value(hasItem(DEFAULT_UPDATED_AT.toString())))
@@ -289,6 +303,8 @@ class SalesForceUserResourceIT {
             .andExpect(jsonPath("$.userRole").value(DEFAULT_USER_ROLE.toString()))
             .andExpect(jsonPath("$.dateOfJoining").value(DEFAULT_DATE_OF_JOINING.toString()))
             .andExpect(jsonPath("$.dateOfExit").value(DEFAULT_DATE_OF_EXIT.toString()))
+            .andExpect(jsonPath("$.state").value(DEFAULT_STATE))
+            .andExpect(jsonPath("$.region").value(DEFAULT_REGION))
             .andExpect(jsonPath("$.isActive").value(DEFAULT_IS_ACTIVE.booleanValue()))
             .andExpect(jsonPath("$.createdAt").value(DEFAULT_CREATED_AT.toString()))
             .andExpect(jsonPath("$.updatedAt").value(DEFAULT_UPDATED_AT.toString()))
@@ -322,6 +338,8 @@ class SalesForceUserResourceIT {
             .userRole(UPDATED_USER_ROLE)
             .dateOfJoining(UPDATED_DATE_OF_JOINING)
             .dateOfExit(UPDATED_DATE_OF_EXIT)
+            .state(UPDATED_STATE)
+            .region(UPDATED_REGION)
             .isActive(UPDATED_IS_ACTIVE)
             .createdAt(UPDATED_CREATED_AT)
             .updatedAt(UPDATED_UPDATED_AT)
@@ -347,6 +365,8 @@ class SalesForceUserResourceIT {
         assertThat(testSalesForceUser.getUserRole()).isEqualTo(UPDATED_USER_ROLE);
         assertThat(testSalesForceUser.getDateOfJoining()).isEqualTo(UPDATED_DATE_OF_JOINING);
         assertThat(testSalesForceUser.getDateOfExit()).isEqualTo(UPDATED_DATE_OF_EXIT);
+        assertThat(testSalesForceUser.getState()).isEqualTo(UPDATED_STATE);
+        assertThat(testSalesForceUser.getRegion()).isEqualTo(UPDATED_REGION);
         assertThat(testSalesForceUser.getIsActive()).isEqualTo(UPDATED_IS_ACTIVE);
         assertThat(testSalesForceUser.getCreatedAt()).isEqualTo(UPDATED_CREATED_AT);
         assertThat(testSalesForceUser.getUpdatedAt()).isEqualTo(UPDATED_UPDATED_AT);
@@ -436,9 +456,10 @@ class SalesForceUserResourceIT {
         partialUpdatedSalesForceUser
             .name(UPDATED_NAME)
             .phone(UPDATED_PHONE)
+            .state(UPDATED_STATE)
             .isActive(UPDATED_IS_ACTIVE)
+            .createdAt(UPDATED_CREATED_AT)
             .updatedAt(UPDATED_UPDATED_AT)
-            .createdBy(UPDATED_CREATED_BY)
             .updatedBy(UPDATED_UPDATED_BY);
 
         restSalesForceUserMockMvc
@@ -459,10 +480,12 @@ class SalesForceUserResourceIT {
         assertThat(testSalesForceUser.getUserRole()).isEqualTo(DEFAULT_USER_ROLE);
         assertThat(testSalesForceUser.getDateOfJoining()).isEqualTo(DEFAULT_DATE_OF_JOINING);
         assertThat(testSalesForceUser.getDateOfExit()).isEqualTo(DEFAULT_DATE_OF_EXIT);
+        assertThat(testSalesForceUser.getState()).isEqualTo(UPDATED_STATE);
+        assertThat(testSalesForceUser.getRegion()).isEqualTo(DEFAULT_REGION);
         assertThat(testSalesForceUser.getIsActive()).isEqualTo(UPDATED_IS_ACTIVE);
-        assertThat(testSalesForceUser.getCreatedAt()).isEqualTo(DEFAULT_CREATED_AT);
+        assertThat(testSalesForceUser.getCreatedAt()).isEqualTo(UPDATED_CREATED_AT);
         assertThat(testSalesForceUser.getUpdatedAt()).isEqualTo(UPDATED_UPDATED_AT);
-        assertThat(testSalesForceUser.getCreatedBy()).isEqualTo(UPDATED_CREATED_BY);
+        assertThat(testSalesForceUser.getCreatedBy()).isEqualTo(DEFAULT_CREATED_BY);
         assertThat(testSalesForceUser.getUpdatedBy()).isEqualTo(UPDATED_UPDATED_BY);
     }
 
@@ -485,6 +508,8 @@ class SalesForceUserResourceIT {
             .userRole(UPDATED_USER_ROLE)
             .dateOfJoining(UPDATED_DATE_OF_JOINING)
             .dateOfExit(UPDATED_DATE_OF_EXIT)
+            .state(UPDATED_STATE)
+            .region(UPDATED_REGION)
             .isActive(UPDATED_IS_ACTIVE)
             .createdAt(UPDATED_CREATED_AT)
             .updatedAt(UPDATED_UPDATED_AT)
@@ -509,6 +534,8 @@ class SalesForceUserResourceIT {
         assertThat(testSalesForceUser.getUserRole()).isEqualTo(UPDATED_USER_ROLE);
         assertThat(testSalesForceUser.getDateOfJoining()).isEqualTo(UPDATED_DATE_OF_JOINING);
         assertThat(testSalesForceUser.getDateOfExit()).isEqualTo(UPDATED_DATE_OF_EXIT);
+        assertThat(testSalesForceUser.getState()).isEqualTo(UPDATED_STATE);
+        assertThat(testSalesForceUser.getRegion()).isEqualTo(UPDATED_REGION);
         assertThat(testSalesForceUser.getIsActive()).isEqualTo(UPDATED_IS_ACTIVE);
         assertThat(testSalesForceUser.getCreatedAt()).isEqualTo(UPDATED_CREATED_AT);
         assertThat(testSalesForceUser.getUpdatedAt()).isEqualTo(UPDATED_UPDATED_AT);

@@ -66,6 +66,9 @@ public class SalesTargetFilter implements Serializable {
     @Column(name = "state")
     private String state;
 
+    @Column(name = "rigion")
+    private String rigion;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "jhi_join")
     private FilterJoinType join;
@@ -273,6 +276,19 @@ public class SalesTargetFilter implements Serializable {
         this.state = state;
     }
 
+    public String getRigion() {
+        return this.rigion;
+    }
+
+    public SalesTargetFilter rigion(String rigion) {
+        this.setRigion(rigion);
+        return this;
+    }
+
+    public void setRigion(String rigion) {
+        this.rigion = rigion;
+    }
+
     public FilterJoinType getJoin() {
         return this.join;
     }
@@ -401,6 +417,7 @@ public class SalesTargetFilter implements Serializable {
             ", perRetailerDailyArticleMinQty=" + getPerRetailerDailyArticleMinQty() +
             ", perRetailerDailyArticleMaxQty=" + getPerRetailerDailyArticleMaxQty() +
             ", state='" + getState() + "'" +
+            ", rigion='" + getRigion() + "'" +
             ", join='" + getJoin() + "'" +
             ", isActive='" + getIsActive() + "'" +
             ", createdAt='" + getCreatedAt() + "'" +
