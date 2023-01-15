@@ -25,6 +25,8 @@ entity SalesForceUser {
     userRole Role,
     dateOfJoining LocalDate,
     dateOfExit LocalDate,
+    state String,
+    region String,
     isActive Boolean,
     createdAt LocalDate,
     updatedAt LocalDate,
