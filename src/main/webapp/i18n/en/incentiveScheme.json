@@ -21,7 +21,7 @@
       "type": "Type",
       "minAchivementPercent": "Min Achivement Percent",
       "maxAchivementPercent": "Max Achivement Percent",
-      "value": "Value",
+      "schemeValue": "Scheme Value",
       "isActive": "Is Active",
       "createdAt": "Created At",
       "updatedAt": "Updated At",

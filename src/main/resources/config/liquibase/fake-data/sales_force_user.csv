@@ -1,4 +1,4 @@
-id;name;email;phone;role;date_of_joining;date_of_exit;is_active;created_at;updated_at;created_by;updated_by
+id;name;email;phone;user_role;date_of_joining;date_of_exit;is_active;created_at;updated_at;created_by;updated_by
 1;Ergonomic connecting next;"GG@ril.Sb";3978225470;StateHead;2023-01-14;2023-01-14;true;2023-01-14;2023-01-15;Practical compressing Tugrik;next-generation Chips
 2;Automotive Angola;"W|0@ril.'Er";4023495276;Other;2023-01-14;2023-01-14;false;2023-01-14;2023-01-15;Games Account;index
 3;turquoise Senior Analyst;":Z<L@ril.UC#N";2580070815;SuperAdmin;2023-01-15;2023-01-15;true;2023-01-14;2023-01-15;archive SSL;Minnesota

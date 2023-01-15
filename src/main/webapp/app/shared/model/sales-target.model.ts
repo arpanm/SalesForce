@@ -9,7 +9,7 @@ export interface ISalesTarget {
   type?: SalesTargetType | null;
   startDate?: string;
   endDate?: string;
-  value?: number;
+  targetValue?: number;
   isActive?: boolean | null;
   createdAt?: string | null;
   updatedAt?: string | null;

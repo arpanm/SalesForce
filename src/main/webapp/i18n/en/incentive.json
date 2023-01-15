@@ -19,7 +19,7 @@
       },
       "id": "ID",
       "achivementPercent": "Achivement Percent",
-      "value": "Value",
+      "incentiveValue": "Incentive Value",
       "isActive": "Is Active",
       "createdAt": "Created At",
       "updatedAt": "Updated At",

@@ -21,7 +21,7 @@
       "type": "Type",
       "startDate": "Start Date",
       "endDate": "End Date",
-      "value": "Value",
+      "targetValue": "Target Value",
       "isActive": "Is Active",
       "createdAt": "Created At",
       "updatedAt": "Updated At",

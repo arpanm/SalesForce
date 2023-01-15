@@ -43,8 +43,8 @@ class SalesTargetResourceIT {
     private static final LocalDate DEFAULT_END_DATE = LocalDate.ofEpochDay(0L);
     private static final LocalDate UPDATED_END_DATE = LocalDate.now(ZoneId.systemDefault());
 
-    private static final Float DEFAULT_VALUE = 1F;
-    private static final Float UPDATED_VALUE = 2F;
+    private static final Float DEFAULT_TARGET_VALUE = 1F;
+    private static final Float UPDATED_TARGET_VALUE = 2F;
 
     private static final Boolean DEFAULT_IS_ACTIVE = false;
     private static final Boolean UPDATED_IS_ACTIVE = true;
@@ -92,7 +92,7 @@ class SalesTargetResourceIT {
             .type(DEFAULT_TYPE)
             .startDate(DEFAULT_START_DATE)
             .endDate(DEFAULT_END_DATE)
-            .value(DEFAULT_VALUE)
+            .targetValue(DEFAULT_TARGET_VALUE)
             .isActive(DEFAULT_IS_ACTIVE)
             .createdAt(DEFAULT_CREATED_AT)
             .updatedAt(DEFAULT_UPDATED_AT)
@@ -112,7 +112,7 @@ class SalesTargetResourceIT {
             .type(UPDATED_TYPE)
             .startDate(UPDATED_START_DATE)
             .endDate(UPDATED_END_DATE)
-            .value(UPDATED_VALUE)
+            .targetValue(UPDATED_TARGET_VALUE)
             .isActive(UPDATED_IS_ACTIVE)
             .createdAt(UPDATED_CREATED_AT)
             .updatedAt(UPDATED_UPDATED_AT)
@@ -145,7 +145,7 @@ class SalesTargetResourceIT {
         assertThat(testSalesTarget.getType()).isEqualTo(DEFAULT_TYPE);
         assertThat(testSalesTarget.getStartDate()).isEqualTo(DEFAULT_START_DATE);
         assertThat(testSalesTarget.getEndDate()).isEqualTo(DEFAULT_END_DATE);
-        assertThat(testSalesTarget.getValue()).isEqualTo(DEFAULT_VALUE);
+        assertThat(testSalesTarget.getTargetValue()).isEqualTo(DEFAULT_TARGET_VALUE);
         assertThat(testSalesTarget.getIsActive()).isEqualTo(DEFAULT_IS_ACTIVE);
         assertThat(testSalesTarget.getCreatedAt()).isEqualTo(DEFAULT_CREATED_AT);
         assertThat(testSalesTarget.getUpdatedAt()).isEqualTo(DEFAULT_UPDATED_AT);
@@ -216,10 +216,10 @@ class SalesTargetResourceIT {
 
     @Test
     @Transactional
-    void checkValueIsRequired() throws Exception {
+    void checkTargetValueIsRequired() throws Exception {
         int databaseSizeBeforeTest = salesTargetRepository.findAll().size();
         // set the field null
-        salesTarget.setValue(null);
+        salesTarget.setTargetValue(null);
 
         // Create the SalesTarget, which fails.
         SalesTargetDTO salesTargetDTO = salesTargetMapper.toDto(salesTarget);
@@ -249,7 +249,7 @@ class SalesTargetResourceIT {
             .andExpect(jsonPath("$.[*].type").value(hasItem(DEFAULT_TYPE.toString())))
             .andExpect(jsonPath("$.[*].startDate").value(hasItem(DEFAULT_START_DATE.toString())))
             .andExpect(jsonPath("$.[*].endDate").value(hasItem(DEFAULT_END_DATE.toString())))
-            .andExpect(jsonPath("$.[*].value").value(hasItem(DEFAULT_VALUE.doubleValue())))
+            .andExpect(jsonPath("$.[*].targetValue").value(hasItem(DEFAULT_TARGET_VALUE.doubleValue())))
             .andExpect(jsonPath("$.[*].isActive").value(hasItem(DEFAULT_IS_ACTIVE.booleanValue())))
             .andExpect(jsonPath("$.[*].createdAt").value(hasItem(DEFAULT_CREATED_AT.toString())))
             .andExpect(jsonPath("$.[*].updatedAt").value(hasItem(DEFAULT_UPDATED_AT.toString())))
@@ -272,7 +272,7 @@ class SalesTargetResourceIT {
             .andExpect(jsonPath("$.type").value(DEFAULT_TYPE.toString()))
             .andExpect(jsonPath("$.startDate").value(DEFAULT_START_DATE.toString()))
             .andExpect(jsonPath("$.endDate").value(DEFAULT_END_DATE.toString()))
-            .andExpect(jsonPath("$.value").value(DEFAULT_VALUE.doubleValue()))
+            .andExpect(jsonPath("$.targetValue").value(DEFAULT_TARGET_VALUE.doubleValue()))
             .andExpect(jsonPath("$.isActive").value(DEFAULT_IS_ACTIVE.booleanValue()))
             .andExpect(jsonPath("$.createdAt").value(DEFAULT_CREATED_AT.toString()))
             .andExpect(jsonPath("$.updatedAt").value(DEFAULT_UPDATED_AT.toString()))
@@ -303,7 +303,7 @@ class SalesTargetResourceIT {
             .type(UPDATED_TYPE)
             .startDate(UPDATED_START_DATE)
             .endDate(UPDATED_END_DATE)
-            .value(UPDATED_VALUE)
+            .targetValue(UPDATED_TARGET_VALUE)
             .isActive(UPDATED_IS_ACTIVE)
             .createdAt(UPDATED_CREATED_AT)
             .updatedAt(UPDATED_UPDATED_AT)
@@ -326,7 +326,7 @@ class SalesTargetResourceIT {
         assertThat(testSalesTarget.getType()).isEqualTo(UPDATED_TYPE);
         assertThat(testSalesTarget.getStartDate()).isEqualTo(UPDATED_START_DATE);
         assertThat(testSalesTarget.getEndDate()).isEqualTo(UPDATED_END_DATE);
-        assertThat(testSalesTarget.getValue()).isEqualTo(UPDATED_VALUE);
+        assertThat(testSalesTarget.getTargetValue()).isEqualTo(UPDATED_TARGET_VALUE);
         assertThat(testSalesTarget.getIsActive()).isEqualTo(UPDATED_IS_ACTIVE);
         assertThat(testSalesTarget.getCreatedAt()).isEqualTo(UPDATED_CREATED_AT);
         assertThat(testSalesTarget.getUpdatedAt()).isEqualTo(UPDATED_UPDATED_AT);
@@ -415,7 +415,7 @@ class SalesTargetResourceIT {
             .type(UPDATED_TYPE)
             .startDate(UPDATED_START_DATE)
             .endDate(UPDATED_END_DATE)
-            .value(UPDATED_VALUE)
+            .targetValue(UPDATED_TARGET_VALUE)
             .createdAt(UPDATED_CREATED_AT)
             .createdBy(UPDATED_CREATED_BY);
 
@@ -434,7 +434,7 @@ class SalesTargetResourceIT {
         assertThat(testSalesTarget.getType()).isEqualTo(UPDATED_TYPE);
         assertThat(testSalesTarget.getStartDate()).isEqualTo(UPDATED_START_DATE);
         assertThat(testSalesTarget.getEndDate()).isEqualTo(UPDATED_END_DATE);
-        assertThat(testSalesTarget.getValue()).isEqualTo(UPDATED_VALUE);
+        assertThat(testSalesTarget.getTargetValue()).isEqualTo(UPDATED_TARGET_VALUE);
         assertThat(testSalesTarget.getIsActive()).isEqualTo(DEFAULT_IS_ACTIVE);
         assertThat(testSalesTarget.getCreatedAt()).isEqualTo(UPDATED_CREATED_AT);
         assertThat(testSalesTarget.getUpdatedAt()).isEqualTo(DEFAULT_UPDATED_AT);
@@ -458,7 +458,7 @@ class SalesTargetResourceIT {
             .type(UPDATED_TYPE)
             .startDate(UPDATED_START_DATE)
             .endDate(UPDATED_END_DATE)
-            .value(UPDATED_VALUE)
+            .targetValue(UPDATED_TARGET_VALUE)
             .isActive(UPDATED_IS_ACTIVE)
             .createdAt(UPDATED_CREATED_AT)
             .updatedAt(UPDATED_UPDATED_AT)
@@ -480,7 +480,7 @@ class SalesTargetResourceIT {
         assertThat(testSalesTarget.getType()).isEqualTo(UPDATED_TYPE);
         assertThat(testSalesTarget.getStartDate()).isEqualTo(UPDATED_START_DATE);
         assertThat(testSalesTarget.getEndDate()).isEqualTo(UPDATED_END_DATE);
-        assertThat(testSalesTarget.getValue()).isEqualTo(UPDATED_VALUE);
+        assertThat(testSalesTarget.getTargetValue()).isEqualTo(UPDATED_TARGET_VALUE);
         assertThat(testSalesTarget.getIsActive()).isEqualTo(UPDATED_IS_ACTIVE);
         assertThat(testSalesTarget.getCreatedAt()).isEqualTo(UPDATED_CREATED_AT);
         assertThat(testSalesTarget.getUpdatedAt()).isEqualTo(UPDATED_UPDATED_AT);

@@ -1,4 +1,4 @@
-id;type;min_achivement_percent;max_achivement_percent;value;is_active;created_at;updated_at;created_by;updated_by
+id;type;min_achivement_percent;max_achivement_percent;scheme_value;is_active;created_at;updated_at;created_by;updated_by
 1;Absolute;96172;63788;77073;false;2023-01-14;2023-01-15;matrices Cliffs;withdrawal Managed conglomeration
 2;Percent;89806;24476;90827;true;2023-01-15;2023-01-14;CFP;digital Cambridgeshire
 3;Percent;96197;12640;55090;false;2023-01-15;2023-01-14;Course;Tasty

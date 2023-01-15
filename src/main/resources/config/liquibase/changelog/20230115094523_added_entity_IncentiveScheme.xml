@@ -23,7 +23,7 @@
             <column name="max_achivement_percent" type="${floatType}">
                 <constraints nullable="true" />
             </column>
-            <column name="value" type="${floatType}">
+            <column name="scheme_value" type="${floatType}">
                 <constraints nullable="true" />
             </column>
             <column name="is_active" type="boolean">
@@ -71,7 +71,7 @@
             <column name="type" type="string"/>
             <column name="min_achivement_percent" type="numeric"/>
             <column name="max_achivement_percent" type="numeric"/>
-            <column name="value" type="numeric"/>
+            <column name="scheme_value" type="numeric"/>
             <column name="is_active" type="boolean"/>
             <column name="created_at" type="date"/>
             <column name="updated_at" type="date"/>

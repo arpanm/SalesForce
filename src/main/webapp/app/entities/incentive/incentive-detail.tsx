@@ -39,11 +39,11 @@ export const IncentiveDetail = () => {
           </dt>
           <dd>{incentiveEntity.achivementPercent}</dd>
           <dt>
-            <span id="value">
-              <Translate contentKey="salesForceApp.incentive.value">Value</Translate>
+            <span id="incentiveValue">
+              <Translate contentKey="salesForceApp.incentive.incentiveValue">Incentive Value</Translate>
             </span>
           </dt>
-          <dd>{incentiveEntity.value}</dd>
+          <dd>{incentiveEntity.incentiveValue}</dd>
           <dt>
             <span id="isActive">
               <Translate contentKey="salesForceApp.incentive.isActive">Is Active</Translate>

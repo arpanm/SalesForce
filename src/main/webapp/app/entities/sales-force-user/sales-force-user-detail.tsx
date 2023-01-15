@@ -51,11 +51,11 @@ export const SalesForceUserDetail = () => {
           </dt>
           <dd>{salesForceUserEntity.phone}</dd>
           <dt>
-            <span id="role">
-              <Translate contentKey="salesForceApp.salesForceUser.role">Role</Translate>
+            <span id="userRole">
+              <Translate contentKey="salesForceApp.salesForceUser.userRole">User Role</Translate>
             </span>
           </dt>
-          <dd>{salesForceUserEntity.role}</dd>
+          <dd>{salesForceUserEntity.userRole}</dd>
           <dt>
             <span id="dateOfJoining">
               <Translate contentKey="salesForceApp.salesForceUser.dateOfJoining">Date Of Joining</Translate>

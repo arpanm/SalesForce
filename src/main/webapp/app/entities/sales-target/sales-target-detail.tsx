@@ -57,11 +57,11 @@ export const SalesTargetDetail = () => {
             {salesTargetEntity.endDate ? <TextFormat value={salesTargetEntity.endDate} type="date" format={APP_LOCAL_DATE_FORMAT} /> : null}
           </dd>
           <dt>
-            <span id="value">
-              <Translate contentKey="salesForceApp.salesTarget.value">Value</Translate>
+            <span id="targetValue">
+              <Translate contentKey="salesForceApp.salesTarget.targetValue">Target Value</Translate>
             </span>
           </dt>
-          <dd>{salesTargetEntity.value}</dd>
+          <dd>{salesTargetEntity.targetValue}</dd>
           <dt>
             <span id="isActive">
               <Translate contentKey="salesForceApp.salesTarget.isActive">Is Active</Translate>

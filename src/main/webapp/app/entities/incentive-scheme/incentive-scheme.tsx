@@ -136,8 +136,9 @@ export const IncentiveScheme = () => {
                     <Translate contentKey="salesForceApp.incentiveScheme.maxAchivementPercent">Max Achivement Percent</Translate>{' '}
                     <FontAwesomeIcon icon="sort" />
                   </th>
-                  <th className="hand" onClick={sort('value')}>
-                    <Translate contentKey="salesForceApp.incentiveScheme.value">Value</Translate> <FontAwesomeIcon icon="sort" />
+                  <th className="hand" onClick={sort('schemeValue')}>
+                    <Translate contentKey="salesForceApp.incentiveScheme.schemeValue">Scheme Value</Translate>{' '}
+                    <FontAwesomeIcon icon="sort" />
                   </th>
                   <th className="hand" onClick={sort('isActive')}>
                     <Translate contentKey="salesForceApp.incentiveScheme.isActive">Is Active</Translate> <FontAwesomeIcon icon="sort" />
@@ -176,7 +177,7 @@ export const IncentiveScheme = () => {
                     </td>
                     <td>{incentiveScheme.minAchivementPercent}</td>
                     <td>{incentiveScheme.maxAchivementPercent}</td>
-                    <td>{incentiveScheme.value}</td>
+                    <td>{incentiveScheme.schemeValue}</td>
                     <td>{incentiveScheme.isActive ? 'true' : 'false'}</td>
                     <td>
                       {incentiveScheme.createdAt ? (

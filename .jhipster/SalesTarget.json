@@ -21,7 +21,7 @@
       "fieldValidateRules": ["required"]
     },
     {
-      "fieldName": "value",
+      "fieldName": "targetValue",
       "fieldType": "Float",
       "fieldValidateRules": ["required"]
     },

@@ -134,8 +134,8 @@ export const SalesTarget = () => {
                   <th className="hand" onClick={sort('endDate')}>
                     <Translate contentKey="salesForceApp.salesTarget.endDate">End Date</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
-                  <th className="hand" onClick={sort('value')}>
-                    <Translate contentKey="salesForceApp.salesTarget.value">Value</Translate> <FontAwesomeIcon icon="sort" />
+                  <th className="hand" onClick={sort('targetValue')}>
+                    <Translate contentKey="salesForceApp.salesTarget.targetValue">Target Value</Translate> <FontAwesomeIcon icon="sort" />
                   </th>
                   <th className="hand" onClick={sort('isActive')}>
                     <Translate contentKey="salesForceApp.salesTarget.isActive">Is Active</Translate> <FontAwesomeIcon icon="sort" />
@@ -177,7 +177,7 @@ export const SalesTarget = () => {
                     <td>
                       {salesTarget.endDate ? <TextFormat type="date" value={salesTarget.endDate} format={APP_LOCAL_DATE_FORMAT} /> : null}
                     </td>
-                    <td>{salesTarget.value}</td>
+                    <td>{salesTarget.targetValue}</td>
                     <td>{salesTarget.isActive ? 'true' : 'false'}</td>
                     <td>
                       {salesTarget.createdAt ? (

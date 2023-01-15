@@ -23,7 +23,7 @@ public class SalesTargetDTO implements Serializable {
     private LocalDate endDate;
 
     @NotNull
-    private Float value;
+    private Float targetValue;
 
     private Boolean isActive;
 
@@ -69,12 +69,12 @@ public class SalesTargetDTO implements Serializable {
         this.endDate = endDate;
     }
 
-    public Float getValue() {
-        return value;
+    public Float getTargetValue() {
+        return targetValue;
     }
 
-    public void setValue(Float value) {
-        this.value = value;
+    public void setTargetValue(Float targetValue) {
+        this.targetValue = targetValue;
     }
 
     public Boolean getIsActive() {
@@ -154,7 +154,7 @@ public class SalesTargetDTO implements Serializable {
             ", type='" + getType() + "'" +
             ", startDate='" + getStartDate() + "'" +
             ", endDate='" + getEndDate() + "'" +
-            ", value=" + getValue() +
+            ", targetValue=" + getTargetValue() +
             ", isActive='" + getIsActive() + "'" +
             ", createdAt='" + getCreatedAt() + "'" +
             ", updatedAt='" + getUpdatedAt() + "'" +

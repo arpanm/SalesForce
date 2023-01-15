@@ -36,8 +36,8 @@ class IncentiveResourceIT {
     private static final Float DEFAULT_ACHIVEMENT_PERCENT = 1F;
     private static final Float UPDATED_ACHIVEMENT_PERCENT = 2F;
 
-    private static final Float DEFAULT_VALUE = 1F;
-    private static final Float UPDATED_VALUE = 2F;
+    private static final Float DEFAULT_INCENTIVE_VALUE = 1F;
+    private static final Float UPDATED_INCENTIVE_VALUE = 2F;
 
     private static final Boolean DEFAULT_IS_ACTIVE = false;
     private static final Boolean UPDATED_IS_ACTIVE = true;
@@ -83,7 +83,7 @@ class IncentiveResourceIT {
     public static Incentive createEntity(EntityManager em) {
         Incentive incentive = new Incentive()
             .achivementPercent(DEFAULT_ACHIVEMENT_PERCENT)
-            .value(DEFAULT_VALUE)
+            .incentiveValue(DEFAULT_INCENTIVE_VALUE)
             .isActive(DEFAULT_IS_ACTIVE)
             .createdAt(DEFAULT_CREATED_AT)
             .updatedAt(DEFAULT_UPDATED_AT)
@@ -101,7 +101,7 @@ class IncentiveResourceIT {
     public static Incentive createUpdatedEntity(EntityManager em) {
         Incentive incentive = new Incentive()
             .achivementPercent(UPDATED_ACHIVEMENT_PERCENT)
-            .value(UPDATED_VALUE)
+            .incentiveValue(UPDATED_INCENTIVE_VALUE)
             .isActive(UPDATED_IS_ACTIVE)
             .createdAt(UPDATED_CREATED_AT)
             .updatedAt(UPDATED_UPDATED_AT)
@@ -130,7 +130,7 @@ class IncentiveResourceIT {
         assertThat(incentiveList).hasSize(databaseSizeBeforeCreate + 1);
         Incentive testIncentive = incentiveList.get(incentiveList.size() - 1);
         assertThat(testIncentive.getAchivementPercent()).isEqualTo(DEFAULT_ACHIVEMENT_PERCENT);
-        assertThat(testIncentive.getValue()).isEqualTo(DEFAULT_VALUE);
+        assertThat(testIncentive.getIncentiveValue()).isEqualTo(DEFAULT_INCENTIVE_VALUE);
         assertThat(testIncentive.getIsActive()).isEqualTo(DEFAULT_IS_ACTIVE);
         assertThat(testIncentive.getCreatedAt()).isEqualTo(DEFAULT_CREATED_AT);
         assertThat(testIncentive.getUpdatedAt()).isEqualTo(DEFAULT_UPDATED_AT);
@@ -170,7 +170,7 @@ class IncentiveResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(incentive.getId().intValue())))
             .andExpect(jsonPath("$.[*].achivementPercent").value(hasItem(DEFAULT_ACHIVEMENT_PERCENT.doubleValue())))
-            .andExpect(jsonPath("$.[*].value").value(hasItem(DEFAULT_VALUE.doubleValue())))
+            .andExpect(jsonPath("$.[*].incentiveValue").value(hasItem(DEFAULT_INCENTIVE_VALUE.doubleValue())))
             .andExpect(jsonPath("$.[*].isActive").value(hasItem(DEFAULT_IS_ACTIVE.booleanValue())))
             .andExpect(jsonPath("$.[*].createdAt").value(hasItem(DEFAULT_CREATED_AT.toString())))
             .andExpect(jsonPath("$.[*].updatedAt").value(hasItem(DEFAULT_UPDATED_AT.toString())))
@@ -191,7 +191,7 @@ class IncentiveResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(incentive.getId().intValue()))
             .andExpect(jsonPath("$.achivementPercent").value(DEFAULT_ACHIVEMENT_PERCENT.doubleValue()))
-            .andExpect(jsonPath("$.value").value(DEFAULT_VALUE.doubleValue()))
+            .andExpect(jsonPath("$.incentiveValue").value(DEFAULT_INCENTIVE_VALUE.doubleValue()))
             .andExpect(jsonPath("$.isActive").value(DEFAULT_IS_ACTIVE.booleanValue()))
             .andExpect(jsonPath("$.createdAt").value(DEFAULT_CREATED_AT.toString()))
             .andExpect(jsonPath("$.updatedAt").value(DEFAULT_UPDATED_AT.toString()))
@@ -220,7 +220,7 @@ class IncentiveResourceIT {
         em.detach(updatedIncentive);
         updatedIncentive
             .achivementPercent(UPDATED_ACHIVEMENT_PERCENT)
-            .value(UPDATED_VALUE)
+            .incentiveValue(UPDATED_INCENTIVE_VALUE)
             .isActive(UPDATED_IS_ACTIVE)
             .createdAt(UPDATED_CREATED_AT)
             .updatedAt(UPDATED_UPDATED_AT)
@@ -241,7 +241,7 @@ class IncentiveResourceIT {
         assertThat(incentiveList).hasSize(databaseSizeBeforeUpdate);
         Incentive testIncentive = incentiveList.get(incentiveList.size() - 1);
         assertThat(testIncentive.getAchivementPercent()).isEqualTo(UPDATED_ACHIVEMENT_PERCENT);
-        assertThat(testIncentive.getValue()).isEqualTo(UPDATED_VALUE);
+        assertThat(testIncentive.getIncentiveValue()).isEqualTo(UPDATED_INCENTIVE_VALUE);
         assertThat(testIncentive.getIsActive()).isEqualTo(UPDATED_IS_ACTIVE);
         assertThat(testIncentive.getCreatedAt()).isEqualTo(UPDATED_CREATED_AT);
         assertThat(testIncentive.getUpdatedAt()).isEqualTo(UPDATED_UPDATED_AT);
@@ -328,7 +328,7 @@ class IncentiveResourceIT {
 
         partialUpdatedIncentive
             .achivementPercent(UPDATED_ACHIVEMENT_PERCENT)
-            .value(UPDATED_VALUE)
+            .incentiveValue(UPDATED_INCENTIVE_VALUE)
             .createdAt(UPDATED_CREATED_AT)
             .updatedBy(UPDATED_UPDATED_BY);
 
@@ -345,7 +345,7 @@ class IncentiveResourceIT {
         assertThat(incentiveList).hasSize(databaseSizeBeforeUpdate);
         Incentive testIncentive = incentiveList.get(incentiveList.size() - 1);
         assertThat(testIncentive.getAchivementPercent()).isEqualTo(UPDATED_ACHIVEMENT_PERCENT);
-        assertThat(testIncentive.getValue()).isEqualTo(UPDATED_VALUE);
+        assertThat(testIncentive.getIncentiveValue()).isEqualTo(UPDATED_INCENTIVE_VALUE);
         assertThat(testIncentive.getIsActive()).isEqualTo(DEFAULT_IS_ACTIVE);
         assertThat(testIncentive.getCreatedAt()).isEqualTo(UPDATED_CREATED_AT);
         assertThat(testIncentive.getUpdatedAt()).isEqualTo(DEFAULT_UPDATED_AT);
@@ -367,7 +367,7 @@ class IncentiveResourceIT {
 
         partialUpdatedIncentive
             .achivementPercent(UPDATED_ACHIVEMENT_PERCENT)
-            .value(UPDATED_VALUE)
+            .incentiveValue(UPDATED_INCENTIVE_VALUE)
             .isActive(UPDATED_IS_ACTIVE)
             .createdAt(UPDATED_CREATED_AT)
             .updatedAt(UPDATED_UPDATED_AT)
@@ -387,7 +387,7 @@ class IncentiveResourceIT {
         assertThat(incentiveList).hasSize(databaseSizeBeforeUpdate);
         Incentive testIncentive = incentiveList.get(incentiveList.size() - 1);
         assertThat(testIncentive.getAchivementPercent()).isEqualTo(UPDATED_ACHIVEMENT_PERCENT);
-        assertThat(testIncentive.getValue()).isEqualTo(UPDATED_VALUE);
+        assertThat(testIncentive.getIncentiveValue()).isEqualTo(UPDATED_INCENTIVE_VALUE);
         assertThat(testIncentive.getIsActive()).isEqualTo(UPDATED_IS_ACTIVE);
         assertThat(testIncentive.getCreatedAt()).isEqualTo(UPDATED_CREATED_AT);
         assertThat(testIncentive.getUpdatedAt()).isEqualTo(UPDATED_UPDATED_AT);

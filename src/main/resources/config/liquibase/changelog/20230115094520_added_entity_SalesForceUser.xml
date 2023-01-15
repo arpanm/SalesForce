@@ -23,7 +23,7 @@
             <column name="phone" type="bigint">
                 <constraints nullable="false" />
             </column>
-            <column name="role" type="varchar(255)">
+            <column name="user_role" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <column name="date_of_joining" type="date">
@@ -74,7 +74,7 @@
             <column name="name" type="string"/>
             <column name="email" type="string"/>
             <column name="phone" type="numeric"/>
-            <column name="role" type="string"/>
+            <column name="user_role" type="string"/>
             <column name="date_of_joining" type="date"/>
             <column name="date_of_exit" type="date"/>
             <column name="is_active" type="boolean"/>

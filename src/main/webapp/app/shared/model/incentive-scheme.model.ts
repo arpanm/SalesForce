@@ -9,7 +9,7 @@ export interface IIncentiveScheme {
   type?: IncentiveSchemeType | null;
   minAchivementPercent?: number | null;
   maxAchivementPercent?: number | null;
-  value?: number | null;
+  schemeValue?: number | null;
   isActive?: boolean | null;
   createdAt?: string | null;
   updatedAt?: string | null;

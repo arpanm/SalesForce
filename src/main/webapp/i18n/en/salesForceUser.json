@@ -21,7 +21,7 @@
       "name": "Name",
       "email": "Email",
       "phone": "Phone",
-      "role": "Role",
+      "userRole": "User Role",
       "dateOfJoining": "Date Of Joining",
       "dateOfExit": "Date Of Exit",
       "isActive": "Is Active",

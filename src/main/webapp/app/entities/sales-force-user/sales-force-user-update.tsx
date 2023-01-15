@@ -64,7 +64,7 @@ export const SalesForceUserUpdate = () => {
     isNew
       ? {}
       : {
-          role: 'SuperAdmin',
+          userRole: 'SuperAdmin',
           ...salesForceUserEntity,
           manager: salesForceUserEntity?.manager?.id,
         };
@@ -132,10 +132,10 @@ export const SalesForceUserUpdate = () => {
                 }}
               />
               <ValidatedField
-                label={translate('salesForceApp.salesForceUser.role')}
-                id="sales-force-user-role"
-                name="role"
-                data-cy="role"
+                label={translate('salesForceApp.salesForceUser.userRole')}
+                id="sales-force-user-userRole"
+                name="userRole"
+                data-cy="userRole"
                 type="select"
               >
                 {roleValues.map(role => (

@@ -19,7 +19,7 @@ public class IncentiveSchemeDTO implements Serializable {
 
     private Float maxAchivementPercent;
 
-    private Float value;
+    private Float schemeValue;
 
     private Boolean isActive;
 
@@ -67,12 +67,12 @@ public class IncentiveSchemeDTO implements Serializable {
         this.maxAchivementPercent = maxAchivementPercent;
     }
 
-    public Float getValue() {
-        return value;
+    public Float getSchemeValue() {
+        return schemeValue;
     }
 
-    public void setValue(Float value) {
-        this.value = value;
+    public void setSchemeValue(Float schemeValue) {
+        this.schemeValue = schemeValue;
     }
 
     public Boolean getIsActive() {
@@ -160,7 +160,7 @@ public class IncentiveSchemeDTO implements Serializable {
             ", type='" + getType() + "'" +
             ", minAchivementPercent=" + getMinAchivementPercent() +
             ", maxAchivementPercent=" + getMaxAchivementPercent() +
-            ", value=" + getValue() +
+            ", schemeValue=" + getSchemeValue() +
             ", isActive='" + getIsActive() + "'" +
             ", createdAt='" + getCreatedAt() + "'" +
             ", updatedAt='" + getUpdatedAt() + "'" +

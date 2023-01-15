@@ -19,7 +19,7 @@
       "fieldType": "Float"
     },
     {
-      "fieldName": "value",
+      "fieldName": "schemeValue",
       "fieldType": "Float"
     },
     {

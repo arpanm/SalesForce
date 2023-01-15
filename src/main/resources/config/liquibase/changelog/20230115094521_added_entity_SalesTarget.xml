@@ -23,7 +23,7 @@
             <column name="end_date" type="date">
                 <constraints nullable="false" />
             </column>
-            <column name="value" type="${floatType}">
+            <column name="target_value" type="${floatType}">
                 <constraints nullable="false" />
             </column>
             <column name="is_active" type="boolean">
@@ -68,7 +68,7 @@
             <column name="type" type="string"/>
             <column name="start_date" type="date"/>
             <column name="end_date" type="date"/>
-            <column name="value" type="numeric"/>
+            <column name="target_value" type="numeric"/>
             <column name="is_active" type="boolean"/>
             <column name="created_at" type="date"/>
             <column name="updated_at" type="date"/>
