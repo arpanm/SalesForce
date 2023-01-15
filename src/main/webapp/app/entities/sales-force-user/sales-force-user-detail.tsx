@@ -77,6 +77,18 @@ export const SalesForceUserDetail = () => {
             ) : null}
           </dd>
           <dt>
+            <span id="state">
+              <Translate contentKey="salesForceApp.salesForceUser.state">State</Translate>
+            </span>
+          </dt>
+          <dd>{salesForceUserEntity.state}</dd>
+          <dt>
+            <span id="region">
+              <Translate contentKey="salesForceApp.salesForceUser.region">Region</Translate>
+            </span>
+          </dt>
+          <dd>{salesForceUserEntity.region}</dd>
+          <dt>
             <span id="isActive">
               <Translate contentKey="salesForceApp.salesForceUser.isActive">Is Active</Translate>
             </span>

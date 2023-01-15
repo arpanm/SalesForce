@@ -32,6 +32,10 @@ public class SalesForceUserDTO implements Serializable {
 
     private LocalDate dateOfExit;
 
+    private String state;
+
+    private String region;
+
     private Boolean isActive;
 
     private LocalDate createdAt;
@@ -98,6 +102,22 @@ public class SalesForceUserDTO implements Serializable {
 
     public void setDateOfExit(LocalDate dateOfExit) {
         this.dateOfExit = dateOfExit;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
     }
 
     public Boolean getIsActive() {
@@ -180,6 +200,8 @@ public class SalesForceUserDTO implements Serializable {
             ", userRole='" + getUserRole() + "'" +
             ", dateOfJoining='" + getDateOfJoining() + "'" +
             ", dateOfExit='" + getDateOfExit() + "'" +
+            ", state='" + getState() + "'" +
+            ", region='" + getRegion() + "'" +
             ", isActive='" + getIsActive() + "'" +
             ", createdAt='" + getCreatedAt() + "'" +
             ", updatedAt='" + getUpdatedAt() + "'" +
